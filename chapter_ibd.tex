@@ -1,6 +1,6 @@
 \glsresetall
 
-\chapter{Guiding longitudinal sampling in inflammatory bowel diseases cohorts}
+\section{Guiding longitudinal sampling in inflammatory bowel diseases cohorts}
 
 The volatile microbial signatures of\gls{cd} patients greatly hinder our ability to classify healthy from affected subjects using 16S rRNA profiles from stool. The recent work by Pascal et al. \cite{RN4208} overcomes this issue and other complications \cite{RN4219}, producing a decision tree that classifies subjects with \gls{cd}, \gls{uc}, irritable bowel syndrome and anorexia. Although the authors note that both subtypes of \gls{ibd}, particularly \gls{cd}, have increased microbial community instability, this information is not used as a feature to improve classifier accuracy. Could microbiome instability become actionable by creating a new classifier that benefits from repeated measurements? If so, how many samples per individual are needed to assess instability?
 
@@ -49,7 +49,21 @@ Novel analyses aggregating features over time and combining both alpha and beta 
 
 The methods demonstrated here have not previously been used for microbiome analyses but have been used for other engineering applications, for example in production lines to predict product specification outcomes in a steel manufacturer's facility \cite{RN4216}. We expect the results to generalize in other systems, including other gastrointestinal and hepatic disorders, where dynamic features of the microbiome, host gene expression, or other accessible features can act as indicators of underlying dysbiotic states.
 
-\section{Methods}
+\subsection{Data Processing}
+
+Demultiplexed sequences were filtered using \glspl{qiime} \cite{RN110} default parameters for quality control using (version 1.8.0-dev). To account for the fact that a subset of the sequences were processed using a MiSeq instrument and the rest using a HiSeq instrument, the resulting reads were trimmed to an even length of 99 nucleotides \cite{RN4221, RN4222}. The resulting sequences were clustered using the closed-reference \gls{otu}-picking protocol (utilizing UCLUST as the clustering algorithm \cite{RN3776}) against the Greengenes database (release 13\textunderscore 8) \cite{RN165}. Distance matrices were calculated using the UniFrac \cite{RN3770} distance metric. Bimodality tests were performed using Hartigan's dip test \cite{RN4017}. To account for uneven sampling efforts in the samples, the resulting \gls{otu} table was rarefied at 7,400 sequences per sample. The number was selected so the main category of interest (health status of the patient) had a balanced number of classes.
+
+\subsection{Classifier}
+
+To assess the benefits of increased number of samples per subject, we used a Random Forests \cite{RN4205} model and we created the features following these steps. First we randomly selected $N$ samples for each subject.  For this set of $N$ samples, we created features based on alpha diversity, beta diversity and microbial relative abundances. We then split the dataset into training and testing subsets and evaluated the classifier's sensitivity and specificity. Finally, we repeated the selection of $N$ random samples for $M$ iterations, and summarized the results using a \gls{roc} curve and the \gls{auc}. After the $M$ iterations, we increased $N$ by one and repeated the procedure until we reached $N'$. The result is a total of $N'-N$ \gls{roc} curves and \gls{auc} scores (one for each number of samples per subject).
+
+The features are created based on longitudinal patterns of the different data types (alpha diversity, beta diversity and relative abundances). In all cases, we relied on the sample collection date to order the data and measured a series of summary statistics. For alpha diversity and the microbial relative abundances, the per-sample summaries were ordered and treated as vectors. For beta diversity, we considered only the distances between ordered and subsequent timepoints and treated this as a vector. Features were extracted from these vectors as described in the TSFRESH package \cite{RN4216}, for example by counting the number of samples where an individual \gls{otu} is not zero, to include the mean of alpha or beta diversity distances, the mean rate of change of the alpha diversity vector, etc.
+
+In the case of the microbial abundances, we performed a feature selection step using phylofactor \cite{RN4204}. Phylofactorization was performed by maximizing the F-statistic from logistic regression on disease state in patients with \gls{cd}. Over 200 factors were found as significant predictors of \gls{cd} in the terminal ileum, even when controlling for multiple comparisons by a Bonferroni correction. Two factors identified large clades ($>$100 \glspl{otu}) used for feature selection. Factor 3 identified a monophyletic clade of 518 \glspl{otu} in the Lachnospiraceae family which decreases in the terminal ileum of patients with \gls{cd} relative to healthy patients, and factor 26 identified a monophyletic clade containing 737 \glspl{otu} of the \textit{Gammaproteobacteria} and \textit{Betaproteobacteria} classes which increases in relative abundance in the terminal ileum of patients with \gls{cd} relative to healthy patients (Supplementary Figure~1\footnote{\url{https://static-content.springer.com/esm/art\%3A10.1186\%2Fs40168-017-0269-3/MediaObjects/40168_2017_269_MOESM2_ESM.tif}}). The dataset used for feature selection \cite{RN140}, was not used during the training or testing stages of the classifier construction.
+
+Jupyter notebooks and source code describing all the analyses in this paper can be found online\footnote{\url{https://github.com/knightlab-analyses/longitudinal-ibd}}.
+
+\subsection{Methods}
 
 Patients with proven \gls{cd} diagnosed for at least 3 months and in clinical remission were recruited at the University of North Carolina (see Table~\ref{ibd-table1}). Serial stool samples as outlined below were submitted for analysis. Exclusion criteria for entry into the study were active \gls{cd} as defined by a short \gls{cdai} score $>$ 150; fistulizing \gls{cd}, concomitant use of azathioprine (AZA), 6-mercaptopurine (6-MP), methotrexate or anti-TNF agents for less than 3 months; or concomitant use of systemic steroids or budesonide. Steroids or budesonide had to be discontinued at least 8 weeks before inclusion, and local, rectally administered therapies containing 5-ASA (enemas, suppositories) or steroid enemas/foams should have not been used for the previous 4 weeks. Also, \glspl{nsaid} were not allowed as regular treatment, which was defined as use for at least 4 days a week each month. Patients were excluded if they were on antibiotic therapy $\geq$5 days each month or had antibiotic therapy $\geq$5 days in the previous 24 weeks. No probiotics were allowed in the last 24 weeks before inclusion and patients on long-term therapy with narcotics $>$2 days weekly were excluded.  Further subject exclusions were known Hepatitis B, Hepatitis C or PSC or regular, high dose alcohol consumption (more than seven drinks per week). All trial participants were prohibited from consuming specific diets (e.g. Atkins diet, low carbohydrate diet). In the second subset we also included nonaffected family members to collect serial fecal samples.  The requirement for the family subjects was one sibling age $\geq$ 8 years without known \gls{cd} or ulcerative colitis and two living parents without \gls{cd} or ulcerative colitis. The same exclusion criteria for antibiotics, probiotics, narcotics and concomitant diseases as in the main study were applied. 
 
@@ -63,7 +77,7 @@ Patients with proven \gls{cd} diagnosed for at least 3 months and in clinical re
     \midrule
     \multicolumn{2}{r}{Age (years, median; range)} &	31 (15-51)\\
 \midrule
-\multicolumn{2}{r}{Duration of Crohn’s disease (years median; range)} &	9 (0.5-35)\\
+\multicolumn{2}{r}{Duration of Crohn's disease (years median; range)} &	9 (0.5-35)\\
 \midrule
 \multirow{3}{*}{Location of Crohn's disease (n)} & 	Ileal & 5\\
  &   	Ileo-colonic & 10\\
@@ -85,39 +99,25 @@ Patients with proven \gls{cd} diagnosed for at least 3 months and in clinical re
     \end{tabular}
 \end{table}
 
-\subsection{Fecal collection}
+\subsubsection{Fecal collection}
 
 Stool was collected daily using a swab technique \cite{RN4220}, which enables the study subject to collect stool samples from the toilet paper. Samples were stored on a -20\textdegree C freezer. Fifteen patients collected daily stool for two 2-week periods separated by an interval of 4 weeks, during which no stool was collected.  The short \gls{cdai} was evaluated at entry and at the end of collection period 1 and 2 \cite{RN4006}. The collection periods for the family substudy, which included 4 patients with inactive \gls{cd} with same exclusion criteria as above and 3 unaffected family members of each \gls{cd} patient were two separate 4 weeks periods interrupted by a 3 month collection-free interval.
 
-\subsection{DNA Extraction}
+\subsubsection{DNA Extraction}
 
 Fecal DNA isolation was performed according to the 16S Earth Microbiome Project Protocol \cite{RN164}. Of the 960 samples analyzed, the initial subset (384 samples)  were processed using the Illumina MiSeq platform (150 nucleotide sequences), and for the second subset (576 samples) were processed using the HiSeq platform (100 nucleotide sequences).
 
-\subsection{Data Processing}
-
-Demultiplexed sequences were filtered using \glspl{qiime} \cite{RN110} default parameters for quality control using (version 1.8.0-dev). To account for the fact that a subset of the sequences were processed using a MiSeq instrument and the rest using a HiSeq instrument, the resulting reads were trimmed to an even length of 99 nucleotides \cite{RN4221, RN4222}. The resulting sequences were clustered using the closed-reference \gls{otu}-picking protocol (utilizing UCLUST as the clustering algorithm \cite{RN3776}) against the Greengenes database (release 13\textunderscore 8) \cite{RN165}. Distance matrices were calculated using the UniFrac \cite{RN3770} distance metric. Bimodality tests were performed using Hartigan’s dip test \cite{RN4017}. To account for uneven sampling efforts in the samples, the resulting \gls{otu} table was rarefied at 7,400 sequences per sample. The number was selected so the main category of interest (health status of the patient) had a balanced number of classes.
-
-\subsection{Classifier}
-
-To assess the benefits of increased number of samples per subject, we used a Random Forests \cite{RN4205} model and we created the features following these steps. First we randomly selected $N$ samples for each subject.  For this set of $N$ samples, we created features based on alpha diversity, beta diversity and microbial relative abundances. We then split the dataset into training and testing subsets and evaluated the classifier's sensitivity and specificity. Finally, we repeated the selection of $N$ random samples for $M$ iterations, and summarized the results using a \gls{roc} curve and the \gls{auc}. After the $M$ iterations, we increased $N$ by one and repeated the procedure until we reached $N'$. The result is a total of $N'-N$ \gls{roc} curves and \gls{auc} scores (one for each number of samples per subject).
-
-The features are created based on longitudinal patterns of the different data types (alpha diversity, beta diversity and relative abundances). In all cases, we relied on the sample collection date to order the data and measured a series of summary statistics. For alpha diversity and the microbial relative abundances, the per-sample summaries were ordered and treated as vectors. For beta diversity, we considered only the distances between ordered and subsequent timepoints and treated this as a vector. Features were extracted from these vectors as described in the TSFRESH package \cite{RN4216}, for example by counting the number of samples where an individual \gls{otu} is not zero, to include the mean of alpha or beta diversity distances, the mean rate of change of the alpha diversity vector, etc.
-
-In the case of the microbial abundances, we performed a feature selection step using phylofactor \cite{RN4204}. Phylofactorization was performed by maximizing the F-statistic from logistic regression on disease state in patients with \gls{cd}. Over 200 factors were found as significant predictors of \gls{cd} in the terminal ileum, even when controlling for multiple comparisons by a Bonferroni correction. Two factors identified large clades ($>$100 \glspl{otu}) used for feature selection. Factor 3 identified a monophyletic clade of 518 \glspl{otu} in the Lachnospiraceae family which decreases in the terminal ileum of patients with \gls{cd} relative to healthy patients, and factor 26 identified a monophyletic clade containing 737 \glspl{otu} of the \textit{Gammaproteobacteria} and \textit{Betaproteobacteria} classes which increases in relative abundance in the terminal ileum of patients with \gls{cd} relative to healthy patients (Supplementary Figure~1\footnote{\url{https://static-content.springer.com/esm/art\%3A10.1186\%2Fs40168-017-0269-3/MediaObjects/40168_2017_269_MOESM2_ESM.tif}}). The dataset used for feature selection \cite{RN140}, was not used during the training or testing stages of the classifier construction.
-
-Jupyter notebooks and source code describing all the analyses in this paper can be found online\footnote{\url{https://github.com/knightlab-analyses/longitudinal-ibd}}.
-
-\subsection{Data Availability}
+\subsubsection{Data Availability}
 
 The sequences have been deposited on EBI and are available under the following accession number ERPXXXX.  In addition, the processed sequences and sample information can be found in the Qiita\footnote{\url{https://qiita.ucsd.edu/study/description/2538}} database under the study identifier 2538.
 
 
-\section{Acknowledgments}
+\subsubsection{Acknowledgments}
 We acknowledge grant support by NIH (P01-DK094779), the Crohn's and Colitis Foundation, and the research coordinators of the UNC Multidisciplinary IBD Center at UNC for patient recruitment. Additionally, we thank Gail Ackermann, Jamie Morton and Justin Silverman for their invaluable feedback and discussion provided in the preparation of this manuscript.
 
-\section{Author Contributions}
+\subsubsection{Author Contributions}
 
 Y. V.B. wrote the manuscript, managed the data depositions, interpreted and analyzed the data. A. G. contributed to the manuscript, interpreted and analyzed the data. Z. X. interpreted and analyzed the data. A. W. contributed to the manuscript, interpreted and analyzed the data. H. H., contributed to the manuscript, designed the experiment, interpreted and analyzed the data. R. B. S. wrote the manuscript, designed the experiment, interpreted and analyzed the data. R. K. wrote the manuscript, interpreted, sequenced and analyzed the data. All authors finalized and approved the current version of the manuscript.
 
-\section{Conflict of interest}
+\subsubsection{Conflict of interest}
 We declare none.

@@ -1,16 +1,16 @@
 \glsresetall
 
-\chapter{Dog and human inflammatory bowel disease rely on overlapping yet distinct dysbiosis networks}
+\section{Dog and human inflammatory bowel disease rely on overlapping yet distinct dysbiosis networks}
 
-\section{Abstract}
+\subsection{Abstract}
 
 \Gls{ibd} is an autoimmune condition that is difficult to diagnose, and where animal models of this disease have questionable human relevance \cite{RN17324}. Here we show that the dysbiosis network underlying \gls{ibd} in dogs differs from that in humans, with some bacteria such as \textit{Fusobacterium} switching roles between the two species (as \textit{Bacteroides fragilis} switches roles between humans and mice) \cite{RN154}. For example a dysbiosis index trained on humans fails when applied to dogs, but a dog-specific dysbiosis index achieves high correlations with the overall dog microbial community diversity patterns. In addition, a random forests classifier trained on dog-specific samples achieves high discriminatory power, even when using stool samples rather than the mucosal biopsies required for high discriminatory power in humans \cite{RN154}. These relationships were not detected in previously published dog \gls{ibd} datasets due to their limited sample size and statistical power \cite{RN147}. Taken together, these results reveal the need to train host-specific dysbiosis networks and point the way towards a generalized understanding of \gls{ibd} across different mammalian models.
 
-\section{Introduction}
+\subsection{Introduction}
 
 Dogs are commonly used as large animal models for drug discovery and safety assessment. The usefulness dogs as a model for \gls{ibd} is yet unexplored, though not unreasonable, as dogs have been useful for studying spontaneously occurring disorders similar to those affecting people \cite{RN144}. For example, dogs live in a close relationship with and share an environment with their owners, and are, therefore, frequently exposed to similar environmental factors, including enteropathogens and toxins. It is well recognized that dogs and humans suffer from similar spontaneous and lifestyle associated diseases such as obesity, allergies, diabetes mellitus, and cancer, and are often treated with similar antibiotics and drugs. \gls{ibd} in humans is a chronic autoimmune disease of multifactorial aetiology and has limited treatment options. Similarly, canine idiopathic \gls{ibd} is a commonly observed chronic inflammatory enteropathy that occurs spontaneously due to similar multifactorial aetiology, namely due to an interplay between an aberrant host immune system, genetics, environmental factors and gut microbiota \cite{RN17324}. Common clinical signs are vomiting, diarrhea, and weight loss. Histological evaluation of intestinal biopsies reveal diffuse or multi-focal inflammatory cell infiltration (most commonly lymphoplasmacytic, followed by eosinophilic and neutrophilic infiltration), with concurrent changes in mucosal architecture (e.g., villus atrophy and fusion) \cite{RN174}. Enteric protein loss may be observed in severe cases. Also, in a subset of dogs, invasive and adherent\textit{ E. coli} have been described, and these share common features with strains isolated from humans with Crohn's disease \cite{RN146}.  Clinical signs may be controlled by single or combination therapy including dietary modifications, antibiotics, and immunosuppressants. However, clinical relapse occurs frequently, and life-long therapy may be needed. Previous small-scale studies have revealed dysbiosis in the small and large intestine of dogs with \gls{ibd}, with some changes in bacterial taxa similar to those observed in humans with \gls{ibd} \cite{RN147}. For example, in both humans and dogs with \gls{ibd}, increases in Proteobacteria, specifically Enterobacteriaceae \cite{RN17268}, and decreases in Firmicutes, including \textit{Faecalibacterium} and \textit{Blautia} \cite{RN17138} have been reported. However, no detailed studies comparing the changes in gut microbiota between humans and canines with \gls{ibd} have been reported to date. The aim of this study was to describe in detail the microbiome changes in a large group of dogs with \gls{ibd}, compare these to the microbiome of humans with \gls{ibd}, assess host similarities and differences, and to train a dysbiosis index composed of non-\gls{ibd} and \gls{ibd} associated bacteria.  
 
-\section{Results and Discussion}
+\subsection{Results and Discussion}
 
 As expected based on results from human studies \cite{RN3999, RN154}, but not previously clearly established in canine studies \cite{RN153, RN17138}, dog \gls{ibd} cases and controls differ substantially in both microbial community diversity and structure (Figure~\ref{dogs_fig1}). \gls{ibd} dogs had a significantly lower alpha diversity (Mann-Whitney test, p=0.003) compared to non-\gls{ibd} affected dogs (Figure~\ref{dogs_fig1}A), however alpha diversity in this population did not correlate with age, fat intake, weight, or protein intake (Supplementary Figure~1\footnote{\url{https://images.nature.com/original/nature-assets/nmicrobiol/2016/nmicrobiol2016177/extref/nmicrobiol2016177-s1.pdf}}), nor with body condition scores (p $>$ 0.05, see supplemental methods). Clear separation (using \gls{permanova} grouping samples by disease status, p=0.001 see supplemental methods) between \gls{ibd} dogs and controls was observed using unweighted UniFrac (Figure~\ref{dogs_fig1}B), and the biplot shows the most abundant taxa driving these overall patterns. Consistent with \cite{RN153}; antibiotic history did not reveal differences within \gls{ibd} affected dogs (\gls{permanova} p=0.501, abx=35, no abx=12), on the contrary a significant effect was observed in non-\gls{ibd} dogs (\gls{permanova} p=0.01; abx=8, no abx=77). Finally when combined, the disease effect was significantly stronger (\gls{permanova} p=0.001) than the history of antibiotic usage (pseudo-F on \gls{ibd} groups 1.99 and pseudo-F based on antibiotics groups 9.46; 1.99 $<$ 9.46).
 
@@ -37,7 +37,7 @@ To measure the relative effect size of host-species and \gls{ibd}, we combined h
 Taken together, these results have important implications for translational medicine and for understanding \gls{ibd} in dogs. Also, the major functional gene content was conserved across non-\gls{ibd} and \gls{ibd} humans and dogs. While some significant predicted functions were identified between non-\gls{ibd} and \gls{ibd} dogs, the human sample population did not have enough non-\gls{ibd} individuals analyzed for proper statistical power. This together with previous work suggests similar functional changes within the microbiota of dogs and humans with \gls{ibd}. Previous studies have already shown that some treatment approaches to \gls{ibd} that target the microbiome are conserved across dogs and humans, such as antibiotics, dietary modulation, and probiotics. For example, specific probiotic therapy has been shown to have similar effects on fecal and mucosa-adherent microbiota and host immune response (i.e., increase of tight junction proteins, increase in beneficial mucosa-adherent bacteria) in humans, dogs, and rat models of colitis \cite{RN17583, RN17357, RN158}. 
 Our study also revealed that the dysbiosis networks clearly differ in some key bacterial groups. Better understanding of the similarities in these microbial networks and functional changes may extend the abilities to test therapeutic approaches across multiple host species.
 
-\section{Methods}
+\subsection{Methods}
 
 Naturally passed fecal samples were analyzed from 85 healthy dogs and 65 dogs with chronic signs of gastrointestinal disease and confirmed inflammatory changes on histopathology. All dogs participated in different clinical studies and leftover fecal samples were utilized for this study. The protocol for sample collection was approved by the Clinical Research Review Committee of the College of Veterinary Medicine, Texas A\&M University (CRRC\#09-06). 
 
@@ -45,17 +45,17 @@ Dogs with clinical signs of chronic \gls{gi} disease (i.e., vomiting, diarrhea, 
 
 Dogs were excluded if they received antibiotics within the past 2 weeks of sample collection. Data on antibiotic history was nevertheless collected: 34/65 dogs with \gls{ibd} had no history of prior antibiotics administration, while 13 dogs received antibiotics several weeks ($>$2) or months before sample collection. The remaining 18 dogs in the \gls{ibd} group had no information about prior antibiotic use. In the healthy group (n=85), 76 dogs had not received any antibiotics, and 9 dogs had a history of antibiotic use, but not within the last 2 weeks of sample collection. No technical replicates were generated in this study.
 
-Sample and animal information (i.e., age, weight, gender, breed, duration of clinical signs, histopathology, antibiotic usage) was obtained from clinical records. Also, if the owner provided the information, the exact diet (trade name and manufacturer) fed at time of sample collection was recorded in the clinical records, and the dietary macronutrients (protein, fat, and carbohydrate content) were recorded from manufacturer’s provided data on the labels. 
+Sample and animal information (i.e., age, weight, gender, breed, duration of clinical signs, histopathology, antibiotic usage) was obtained from clinical records. Also, if the owner provided the information, the exact diet (trade name and manufacturer) fed at time of sample collection was recorded in the clinical records, and the dietary macronutrients (protein, fat, and carbohydrate content) were recorded from manufacturer's provided data on the labels.
 
 Body weights ranged from 2.9 to 55 kg (mean 22 kg, SD: 14.9 kg), which was not significantly different from (Mann Whitney test; p=0.087) the healthy dogs (range 0.9 to 50 kg; mean 20.3 kg, SD: 10.7g). Mean age (SD) was 5.4 (3.07) in the \gls{ibd} group, which was not significantly (Mann Whitney test; p=0.311) different from healthy dogs (4.7, 3.2). There was a wide breed distribution with 37 different breeds in the \gls{ibd} group and 42 different breeds in the control group. In the \gls{ibd} group, Yorkshire terrier, German Shepherd dogs and Labrador Retrievers (n=5 each) were most commonly represented.
 
-\Gls{bcs} were assessed according to the \gls{wsava} criteria. \Gls{bcs} is rated in a 9-point scale that visually evaluates a dog’s body composition. This score has been validated against the standard \gls{dexa} \cite{RN4000}. For this dataset, the \Gls{bcs} was restricted to a subset of the healthy samples, therefore \gls{ibd} vs. Healthy comparisons could not be made in this case.
+\Gls{bcs} were assessed according to the \gls{wsava} criteria. \Gls{bcs} is rated in a 9-point scale that visually evaluates a dog's body composition. This score has been validated against the standard \gls{dexa} \cite{RN4000}. For this dataset, the \Gls{bcs} was restricted to a subset of the healthy samples, therefore \gls{ibd} vs. Healthy comparisons could not be made in this case.
 
-\section{DNA Extraction and Sequencing}
+\subsubsection{DNA Extraction and Sequencing}
 
 DNA isolation was performed as described by the Earth Microbiome Project Protocol (version 4\textunderscore 13) for 16S rRNA\cite{RN164}. The full cohort included 192 samples, of which 15 were removed because those subjects had acute hemorrhagic diarrhea, and had little clinical information available. The remaining 28 samples did not recover enough sequences after quality control including screening for low counts of reads per sample. All samples were sequenced using the Illumina HiSeq platform (2 x 100 nucleotide sequences and an index read).
 
-\section{Data Processing}
+\subsubsection{Data Processing}
 
 Demultiplexed and quality controlled sequences were then clustered against the Greengenes \cite{RN165} database (release 13\textunderscore 8) using the closed reference \gls{otu} picking protocol \cite{RN166} as implemented in \gls{qiime} \cite{RN110} 1.9.0; these processing steps were performed using the default parameters. The \gls{otu} table used for primary analysis was filtered to include only samples from subjects that presented inflammatory bowel disease or that were healthy controls. Blank samples, and subjects with diarrhea were removed. Finally the table was rarefied to normalize for sampling effort \cite{RN167} at 15,000 sequences per sample, this cutoff was selected as having the best trade-off between sequences and samples per disease status category.
 
@@ -63,11 +63,11 @@ Samples from \cite{RN153} were processed with the same pipeline as described abo
 
 To address the differences in sequencing length, the combination of samples with the human dataset \cite{RN154} was preceded by trimming the sequences to an even 100 nucleotides per sequence, the rest of the pipeline was performed as described above. The same \gls{otu} picking protocol and reference database were used, therefore allowing the combination of the studies using the \gls{otu} tables. We only used the fecal samples from the human dataset.
 
-\section{Statistical analysis}
+\subsubsection{Statistical analysis}
 
 Jupyter Notebooks \cite{RN162} with the analysis of this dataset are available on online\footnote{\url{https://www.github.com/ElDeveloper/dogs}}. Briefly, alpha and beta diversity calculations of weighted and unweighted UniFrac \cite{RN133} were performed using \gls{qiime} version 1.9.1. To assess statistical significance in these comparisons we used \gls{permanova}, grouping the samples by disease status (healthy vs \gls{ibd}), p=0.001 in both cases; pseudo-F statistics were 9.46 for unweighted UniFrac and 39.65 for weighted UniFrac. \gls{roc} curves and feature importance were calculated using Caret \cite{RN3986} and hack\textunderscore ml \footnote{\url{https://github.com/RNAer/hack_ml}}.
 
-Statistical significance between diversity distributions were calculated using Mann-Whitney’s test, linear regressions and correlation coefficients were calculated using NumPy 1.10.4 \cite{RN3823} and SciPy version 0.17, and visualized using Seaborn 0.7.0 \cite{RN170}. Principal coordinates analysis plots were created using Emperor 0.9.51-dev~\cite{RN3730}.
+Statistical significance between diversity distributions were calculated using Mann-Whitney's test, linear regressions and correlation coefficients were calculated using NumPy 1.10.4 \cite{RN3823} and SciPy version 0.17, and visualized using Seaborn 0.7.0 \cite{RN170}. Principal coordinates analysis plots were created using Emperor 0.9.51-dev~\cite{RN3730}.
 
 Metagenome predictions were performed using the Galaxy implementation of PiCRUST version 1.9.0. Significant differences in predicted KEGG Pathways between healthy and \gls{ibd} groups were calculated using a Kruskal-Wallis test with multiple corrections (FDR and Bonferroni corrected p-values). The 16S data is comprised of 85 healthy dogs, 64 \gls{ibd}-affected dogs, 29 healthy humans and 450 humans with \gls{ibd}. On the other hand the PICRUSt predicted data is comprised of 85 healthy dogs, 42 \gls{ibd}-affected dogs, 23 healthy humans and 344 humans with \gls{ibd}.
 
@@ -75,13 +75,13 @@ The Jaccard distance was used to compare the PICRUSt predicted data. This metric
 
 To assess the quality of the predictions in the dog samples, we computed the `nearest sequenced taxon index' (see Supplementary Figure S3\footnote{\url{https://images.nature.com/original/nature-assets/nmicrobiol/2016/nmicrobiol2016177/extref/nmicrobiol2016177-s1.pdf}}), and verified that the samples had acceptable values (below 0.15).
 
-\section{Dysbiosis Network}
+\subsubsection{Dysbiosis Network}
 
 The dysbiosis network was calculated as described in \cite{RN154}, using CCREPE \cite{RN168} and visualized using Cytoscape \cite{RN169}. The index is calculated by taking the log transform of the abundance of the ratio of \gls{ibd}-associated microbes to non-\gls{ibd} associated microbes as determined by the correlation network.
 
 This network is created by first scoring the co-occurrence and co-exclusion patterns in the samples. CCREPE uses a compositionally adjusted version of the checkerboard score \cite{RN3985}; the results are filtered to remove non-statistically significant relationships, and to preserve the largest connected component only. We represent the results as a graph where vertices are microbes and edges are interaction types. Vertices are of one of two classes (\gls{ibd}-associated and Healthy-associated) as determined by the class where they were dominantly abundant, and edges between vertices have a weight given by their adjusted checkerboard score (negative values represent co-exclusions, and positive values represent co-occurrences). The specifics of this processing are described in the supplemental Jupyter notebooks.
 
-\section{Accession Numbers}
+\subsubsection{Accession Numbers}
 
 Raw sequences for the dog samples have been deposited to the \gls{ena} at the following accession number ERP014919, equivalent processed \gls{otu} tables and metadata can be accessed through Qiita\footnote{\label{qiitaurl}\url{https://qiita.microbio.me}} under study 833 - `Dog models of inflammatory bowel disease'.
 
@@ -89,14 +89,14 @@ The data for the human dataset\cite{RN154} can be found in the \gls{ena} at the 
 
 Data for the additional dog study \cite{RN153} can be found at the \gls{sra} of the under accession number SRP040310.
 
-\section{Conflict of Interest}
+\subsubsection{Conflict of Interest}
 We declare none.
 
-\section{Author Contributions}
+\subsubsection{Author Contributions}
 Y. V. B. wrote the manuscript, managed, interpreted and analyzed the data. E. H. contributed to the manuscript and analyzed the data. J. S. contributed to the manuscript, analyzed and interpreted the data. R. K. wrote the manuscript and interpreted the data. All authors worked together to finalize and approve this manuscript.
 
 Please direct all material and requests to Rob Knight robknight@ucsd.edu.
 
-\section{Acknowledgments}
+\subsubsection{Acknowledgments}
 
 We wish to acknowledge the support provided by the Crohn's and Colitis Foundation of American; the Templeton Foundation and the Keck Foundation (via the Earth Microbiome Project), the National institutes of Health. We wish to thank Zhenjiang Xu, Jon Sanders, Amnon Amir, Gail Ackermann, Jamie Morton, Luke Ursell, Jessica Metcalf, Antonio Gonzalez and Emma Schwager for their useful comments and feedback in the writing of this manuscript. 

@@ -1,22 +1,22 @@
 \glsresetall
 
-\chapter{EMPeror: a tool for visualizing high-throughput microbial community data}
+\section{EMPeror: a tool for visualizing high-throughput microbial community data}
 
-\section{Abstract}
+\subsection{Abstract}
 
-\subsection{Background}
+\subsubsection{Background}
 
 As microbial ecologists take advantage of high-throughput sequencing technologies to describe microbial communities across ever-increasing numbers of samples, new analysis tools are required to relate the distribution of microbes among larger numbers of communities, and to use increasingly rich and standards-compliant metadata to understand the biological factors driving these relationships. In particular, the Earth Microbiome Project drives these needs by profiling the genomic content of tens of thousands of samples across multiple environment types.  
 
-\subsection{Findings}
+\subsubsection{Findings}
 
-Features of EMPeror include: ability to visualize gradients and categorical data, visualize different principal coordinates axes, present the data in the form of parallel coordinates, show taxa as well as environmental samples, dynamically adjust the size and transparency of the spheres representing the communities on a per-category basis, dynamically scale the axes according to the fraction of variance each explains, show, hide or recolor points according to arbitrary metadata including that compliant with the \gls{mixs} family of standards developed by the Genomic Standards Consortium, display jackknifed-resampled data to assess statistical confidence in clustering, perform coordinate comparisons (useful for procrustes analysis plots), and greatly reduce loading times and overall memory footprint compared to existing approaches. Additionally, ease of sharing, given Emperor’s small output file size, enables agile collaboration by allowing users to embed these visualizations via e-mails or web pages without the need for extra plugins.
+Features of EMPeror include: ability to visualize gradients and categorical data, visualize different principal coordinates axes, present the data in the form of parallel coordinates, show taxa as well as environmental samples, dynamically adjust the size and transparency of the spheres representing the communities on a per-category basis, dynamically scale the axes according to the fraction of variance each explains, show, hide or recolor points according to arbitrary metadata including that compliant with the \gls{mixs} family of standards developed by the Genomic Standards Consortium, display jackknifed-resampled data to assess statistical confidence in clustering, perform coordinate comparisons (useful for procrustes analysis plots), and greatly reduce loading times and overall memory footprint compared to existing approaches. Additionally, ease of sharing, given Emperor's small output file size, enables agile collaboration by allowing users to embed these visualizations via e-mails or web pages without the need for extra plugins.
 
-\subsection{Conclusions}
+\subsubsection{Conclusions}
 
 Here we present EMPeror, an open source and web browser enabled tool with a versatile command line interface that allows researchers to perform rapid exploratory investigations of 3D visualizations of microbial community data such as the widely used principal coordinates plots. EMPeror includes a rich set of controllers to modify features as a function of the metadata. By being specifically tailored to the requirements of microbial ecologists, EMPeror thus increases the speed with which insight can be gained from large microbiome datasets.
 
-\section{Background}
+\subsection{Background}
 
 Rapid increases in sequencing capacity are greatly expanding our ability to understand the microbial world: scaling from a handful of samples to hundreds, or thousands, allows a rich picture of trends over temporal and spatial scales that were previously unattainable. Human microbiome studies are not the only beneficiaries of this ability to perform increased sampling: large-scale patterns are now being discovered in communities ranging from soils \cite{RN108} to oceans \cite{RN115} including the efforts from the \gls{icomm}.  We can now process thousands of samples in a single sequencing run \cite{RN85}, and in turn computational tools must also scale to fulfill these needs \cite{RN53}.
 
@@ -30,8 +30,8 @@ Although data visualization is an empowering tool that allows an efficient under
 
 There are several existing methods for displaying \gls{pcoa} results, but none to date specifically designed to account for the common use cases in this research field; furthermore each of the most representative solutions allots different limitations. For example, \gls{qiime} \cite{RN110}, an open source framework for upstream and downstream analysis of microbial community samples generated via high-throughput sequencing instruments, typically generates 3D plots using \gls{king} \cite{RN111} originally designed as a molecular graphics viewer, which requires static files containing each metadata field to be produced in advance, replicating the coordinates for each of these categories and resulting in long load times and large file sizes when the metadata are rich. SpotFire \cite{RN120} is a very expensive commercial solution, beyond the budget of many research laboratories. Generic packages that provide 3D plotting functionalities such as MATLAB \cite{RN121}, Mathematica \cite{RN118}, R \cite{RN117}, Excel \cite{RN119} or Matplotlib \cite{RN112} can always be used, but custom code or manual approaches are typically required to relate each point to a specific visual feature intended to highlight a given variable. Consequently, this could become a time-consuming process, which as a side effect compromises its reliability, reusability and reproducibility. Moreover, none of the previously mentioned applications are specifically modeled to support the workflows of the modern microbial ecologist. Allowing the user to choose among metadata coloring dynamically, and separating coloring from visibility, has a surprisingly large effect in encouraging interactive exploration, understanding and analysis, and often allows insights into the main factors, as well as more subtle ones, structuring the data to be obtained much more rapidly.
 
-\section{EMPEROR}
-EMPeror is a thoroughly tested and open-source software package with an interactive user interface and hardware-accelerated graphics, implemented with \gls{html5}, \gls{webgl}, Javascript and Python, and tightly integrated with \gls{qiime} \cite{RN110} and PyCogent \cite{RN113}. EMPeror's command line interface accepts \gls{qiime} principal coordinates files and metadata mapping files, and produces an interactive 3D visualization that can be delivered in the context of a web page independent of the command line tool. As an example of EMPeror's ability to deal with continuous variables (time, alpha diversity, pH) that are part of the metadata, these factors can be integrated as an explicit axis in the plot, lines connecting subsequent points of single trajectories (treatments, subjects, sites, etc) or using a colormap to have each sample’s color be a function of its position in the gradient. The main features that EMPeror provides are: 
+\subsection{EMPEROR}
+EMPeror is a thoroughly tested and open-source software package with an interactive user interface and hardware-accelerated graphics, implemented with \gls{html5}, \gls{webgl}, Javascript and Python, and tightly integrated with \gls{qiime} \cite{RN110} and PyCogent \cite{RN113}. EMPeror's command line interface accepts \gls{qiime} principal coordinates files and metadata mapping files, and produces an interactive 3D visualization that can be delivered in the context of a web page independent of the command line tool. As an example of EMPeror's ability to deal with continuous variables (time, alpha diversity, pH) that are part of the metadata, these factors can be integrated as an explicit axis in the plot, lines connecting subsequent points of single trajectories (treatments, subjects, sites, etc) or using a colormap to have each sample's color be a function of its position in the gradient. The main features that EMPeror provides are:
 \begin{enumerate}
     \item easily change visibility features of data points in the plots based on metadata;
     \item can be easily embedded into other tools, such as Evident\footnote{\url{http://github.com/qiime/evident}} as a reusable visualization component;
@@ -62,19 +62,19 @@ Succession of microbial consortia in the developing infant gut microbiome & Gut 
 \end{tabular}
 \end{sidewaystable}
 
-\section{Conclusions}
+\subsection{Conclusions}
 EMPeror provides a user-friendly interface and set of tools for visualizing large numbers of microbial community samples associated with increasingly extensive metadata, and interactively manipulating these data sets to add auxiliary data and visualization techniques. Additionally, it contains several user interface features, which enable straightforward modifications and customization of perceptible aspects in the plot plus the incorporation of statistical techniques, which also help increase the ease and speed of exploratory analysis. We believe that EMPeror will have a large impact on the field, especially for large-scale environmental sampling projects such as the Earth Microbiome Project \cite{RN10}, and large-scale clinical projects such as the Human Microbiome Project \cite{RN35}.
 
-\section{Competing interests}
+\subsection{Competing interests}
 The authors have declared no competing interests.
 
-\section{Authors' contributions}
+\subsection{Authors' contributions}
 YVB, MP and AG developed parts of the visualization and backend frameworks for Emperor. YVB, AG and RK wrote the manuscript. AG, MP and RK established the initial design and goals of the project. All authors read and approved the final manuscript.
 
-\section{Authors' information}
+\subsection{Authors' information}
 YVB, AG, MP and RK are developers and or leaders of the QIIME project.
 
-\section{Availability and Requirements}
+\subsection{Availability and Requirements}
 
 \textbf{Project name:} Emperor
 
@@ -90,7 +90,7 @@ YVB, AG, MP and RK are developers and or leaders of the QIIME project.
 
 \textbf{Any restrictions to use by non-academics:} None.
 
-\section{Acknowledgements}
+\subsection{Acknowledgements}
 
 We thank Jackson Chen, Jai Ram Rideout, Daniel McDonald, William Van Treuren, Jose Antonio Navas-Molina, Nickolas A. Bokulich, Adam Robbins-Pianka and Greg Caporaso for feedback and useful discussion regarding the design and implementation of the software package.
  
