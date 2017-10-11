@@ -16,6 +16,7 @@ pdf: $(DOCNAME).pdf
 # Rules
 %.pdf: %.tex
 	$(LATEXMK) -pdf -M -MP -MF $*.d $*
+	open main.pdf
 
 mostlyclean:
 	$(LATEXMK) -silent -c
