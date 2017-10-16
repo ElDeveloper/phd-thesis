@@ -228,4 +228,5 @@ TSWLatexianTemp*
 *.swo
 *~
 
-
+# unless really needed
+main.pdf
