@@ -16,21 +16,20 @@ when other technologies catch up, become new fields of research or cornerstones
 in consumer applications.  Therefore, while acknowledging this is a tough
 problem, here I present my personal view on future directions that can build up
 from some of the contributions in this thesis. I divide these into three 
-sections: diagnostic, treatment and analysis.
+sections: diagnostic methods, treatment and analysis.
 
-\section{Diagnostic}
+\section{Diagnostic Methods}
 
 In Chapter~\ref{chapter_dogs} and Chapter~\ref{chapter_ibds}, we presented
-examples of disease biomarkers from two different analytical perspectives.
-
-First, in a dog cohort, we showed that we can reformulate the dysbiosis index 
-we originally developed for humans in \cite{Gevers2014}, and make it 
-specific for a different host\hyp{}specie. Both in humans and dogs, this 
+examples of \gls{ibd} and \gls{cd} biomarkers from two different analytical 
+perspectives.  First, in a dog cohort, we showed that we can reformulate the 
+dysbiosis index we originally developed for humans \cite{Gevers2014}, and make 
+it specific for a different host\hyp{}specie. Both in humans and dogs, this 
 log-ratio of bacterial groups is associated with decreased diversity, and in 
 humans is also associated with inflammation. Next, after noticing the increased 
-volatility in the microbiome of subjects with \gls{ibd}, we propose microbial 
-variability in fecal samples as an effective classifier for disease. This 
-method is powerful because it overcomes the low classification accuracy of 
+volatility in the microbiome of subjects with \gls{ibd}, we benchmarked 
+microbial variability in fecal samples as an effective classifier for disease.  
+This method is powerful because it overcomes the low classification accuracy of 
 fecal samples, and improves as more samples per subject are collected.
 
 Although both approaches are encouraging, translating research into 
@@ -70,40 +69,64 @@ shorten the time between discovery and innovation:
   data reuse seamless. Importantly, the work in this thesis was only possible
   through the reuse of existing data (see Chapter~\ref{exploratory_chapter}
   through Chapter~\ref{chapter_fmts}).
-
   Although making data openly available is an important first step, proper
   standardization of processing protocols, will also be key to maximizes data 
-  usability, a remarkable example of this practice is the \gls{emp} 
+  re-usability, a remarkable example of this practice is the \gls{emp} 
   \cite{RN4267}.
 
 \end{description}
 
 \section{Treatment}
 
+Microbiome\hyp{}based treatments, are generally based on the transplantation of 
+microbial communities from a \textit{healthy} donor into an affected 
+\textit{recipient}. Three spearheading examples are: \glspl{fmt} to treat 
+\gls{cdi} \cite{RN4129}, skin microbiomes transplants to treat atopic 
+dermatitis \cite{GalloSkin}, and (although still in early stages) a concentrate 
+of microbial spores to treat \gls{uc} by Seres Therapeutics.
+
 Although most \glspl{fmt} succeed at treating \gls{cdi}, what makes a
 successful transplant is not clear yet, the number of variables implicated in
 answering this question is immense. From a computational complexity standpoint,
-determining whether or not a new community can colonize an existing ecosystem
-is considered a hard problem \cite{RN4266}. Therefore, we must continue to
-expand our understanding, through the app
+\textit{a priori} determination of whether or not a new community can colonize 
+an existing ecosystem is considered a hard problem, belonging to the 
+\textbf{\#-P} class \cite{RN4266}. As such our focus should be on strengthening 
+our systematic understanding of the transplant, and characterize not only what 
+makes a successful transplant but also what makes a failed one.  For example, 
+the impact of the work presented in Section~\ref{section_fmt} could have been 
+magnified, if we had included subjects for which the \gls{fmt} failed. With 
+appropriate sample sizes, we could have applied a number of techniques to 
+single out (if any) the features common that lead to a failed transplant.
 
 \section{Analysis}
-
-The nature of microbiome data is high-dimensional, and often noisy, thus the
-necessity for the exploratory and analytical techniques as presented in
-previous chapters.
 
 Much like our microbial symbionts depend on the host environment (and vice
 versa), the development and funding of analytical tools depends on the
 ever-growing necessity to unravel complex patterns in a number of experimental
 setups (cross-sectional, longitudinal, multi-'omic, etc). Thus, these tools,
 must take into consideration the ability to be flexible, scalable and when
-possible interactive. The following is a brief justification of why these are
-important factors:
+possible interactive.
 
-Customization is always possible, but interactivity fosters creativity and
-leads people to ask more questions.
+Novel analytical methods and software infrastructure, should be built making 
+scalability a priority.  We have seen a steady increase in our capability to 
+generate data, and it is likely that this trend will continue. Emperor 
+(Chapter~\ref{chapter_emperor}) was partly a response to the limitations in 
+existing software, and more recently we had to re-architect the underlying 
+implementation to cope with modern and larger datasets.
 
-At the beginning of this thesis, it was hard to know what the impact of the
-work here would be, quickly we realized that the impact had been large,
+Flexibility and compliance with community standards, makes software available 
+to a wider audience. Take the count table, often acting as the core 
+data-structure for metabolomic, transcriptomic, proteomic, (and other 'omics) 
+analyses. If the software producing this data complies with a standard, like 
+the \gls{biom}-format, the end user is now free to select from a diversity of 
+methods not restricted to its own field of study. This idea is being taken a 
+step further with \gls{qiime} 2, where a semantic type system defines the 
+methods and visualizations that can be applied to a given dataset.
 
+Finally, the value of interactively exploring a dataset, lies on our ability to 
+quickly test hypothesis, and come up with new ones. Future exploratory analysis 
+tools should be developed with interoperability in mind, for example, brushing 
+to select a group of samples in a view of data might act as a filter for a 
+different representation. Modern web technologies, and software development 
+frameworks like \gls{qiime} 2 will likely be the pioneers of these global 
+overviews of microbial diversity.
