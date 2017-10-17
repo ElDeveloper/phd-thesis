@@ -2,16 +2,83 @@
 
 \url{https://ptpb.pw/b7_V.png}
 
-Much like our microbial symbionts depend on the host environment (and vice
-versa), the development and funding of analytical tools depends on the
-ever-growing necessity to unravel complex patterns in a number of experimental
-setups (cross-sectional, longitudinal, multi-'omic, etc). Thus these tools,
-must take into consideration the ability to be flexible, scalable and when
-possible interactive. The following is a brief justification of why these are
-important factors:
+This thesis presents a collection of static and dynamic snapshots of diverse
+microbial systems. Although our new methods are in no way specific to the human
+gut, part of our focus has been to bridge the gap between computation and
+biology, to get us closer towards a future where drug prescription, diet and
+recreational activities can be further \textit{personalized} -- through a layer
+invisible to the naked eye but perceivable in most respects of life.
 
-Customization is always possible, but interactivity fosters creativity and
-leads people to ask more questions.
+It seems impossible to accurately predict the impact of scientific discoveries,
+historically, we have seen great evidence of seemingly anachronistic findings
+(for example neural networks \cite{Tem10}) that later, usually
+when other technologies catch up, become new fields of research or cornerstones
+in consumer applications.  Therefore, while acknowledging this is a tough
+problem, here I present my personal view on future directions that can build up
+from some of the contributions in this thesis. I divide these into three 
+sections: diagnostic, treatment and analysis.
+
+\section{Diagnostic}
+
+In Chapter~\ref{chapter_dogs} and Chapter~\ref{chapter_ibds}, we presented
+examples of disease biomarkers from two different analytical perspectives.
+
+First, in a dog cohort, we showed that we can reformulate the dysbiosis index 
+we originally developed for humans in \cite{Gevers2014}, and make it 
+specific for a different host\hyp{}specie. Both in humans and dogs, this 
+log-ratio of bacterial groups is associated with decreased diversity, and in 
+humans is also associated with inflammation. Next, after noticing the increased 
+volatility in the microbiome of subjects with \gls{ibd}, we propose microbial 
+variability in fecal samples as an effective classifier for disease. This 
+method is powerful because it overcomes the low classification accuracy of 
+fecal samples, and improves as more samples per subject are collected.
+
+Although both approaches are encouraging, translating research into 
+consumer\hyp{}level applications, commonly presents formidable challenges that 
+might only be solvable by future generations.  Take for example the \gls{ecg}, 
+it took almost 125 years, between the first observation of 
+biopotentials\footnote{Credited to Luigi Galvani in 1787.}, and the moment when 
+the first table \gls{ecg}\footnote{Willem Einthoven's ectrocardiograph 
+manufactured by the Cambridge Scientific Instrument Company of London in 1911.} 
+became commercially available \cite{ECGZywietz}. Even after the tremendous 
+progress, proper validation of computer-generated diagnostics only appeared 
+more than 200 years after the initial discovery \cite{njem_ecg}.
+
+I use the example of the \gls{ecg}, because much like raw heart biopotentials,
+(\textit{i}) microbiome data is plagued with noise, and (\textit{ii})
+determining the appropriate filters and thresholds directly depends on the
+use-case. However, unlike with the early developments of the \gls{ecg}, we live
+in digital and connected world. As such, the following focuses will
+shorten the time between discovery and innovation:
+
+\begin{description}
+
+  \item[Mechanistic Studies]The novelty characteristic of microbiome studies,
+  has produced a large amount of descriptive studies, contrastingly,
+  mechanistic experiments have lagged in validating many of these findings 
+  (likely due to the more expensive requirements).  If the goal is to relate 
+  the presence or abundance of a microbiome feature to disease state or 
+  biochemical process, the underlying methods must be informed
+  by biological inferences in order for these biomarkers to be credible.
+
+  \item[Open Data]Medical research is specially affected by human factors,
+  being able to consistently collect samples from a subject is not always easy
+  or deterministic (think of bowel problems and fecal samples). A powerful
+  practice used to counter underpowered studies, is to improve on the current
+  sample size through the reuse of previously published data. The availability
+  of open resources like Qiita\footnote{\url{https://qiita.ucsd.edu/}}, makes
+  data reuse seamless. Importantly, the work in this thesis was only possible
+  through the reuse of existing data (see Chapter~\ref{exploratory_chapter}
+  through Chapter~\ref{chapter_fmts}).
+
+  Although making data openly available is an important first step, proper
+  standardization of processing protocols, will also be key to maximizes data 
+  usability, a remarkable example of this practice is the \gls{emp} 
+  \cite{RN4267}.
+
+\end{description}
+
+\section{Treatment}
 
 Although most \glspl{fmt} succeed at treating \gls{cdi}, what makes a
 successful transplant is not clear yet, the number of variables implicated in
@@ -19,3 +86,24 @@ answering this question is immense. From a computational complexity standpoint,
 determining whether or not a new community can colonize an existing ecosystem
 is considered a hard problem \cite{RN4266}. Therefore, we must continue to
 expand our understanding, through the app
+
+\section{Analysis}
+
+The nature of microbiome data is high-dimensional, and often noisy, thus the
+necessity for the exploratory and analytical techniques as presented in
+previous chapters.
+
+Much like our microbial symbionts depend on the host environment (and vice
+versa), the development and funding of analytical tools depends on the
+ever-growing necessity to unravel complex patterns in a number of experimental
+setups (cross-sectional, longitudinal, multi-'omic, etc). Thus, these tools,
+must take into consideration the ability to be flexible, scalable and when
+possible interactive. The following is a brief justification of why these are
+important factors:
+
+Customization is always possible, but interactivity fosters creativity and
+leads people to ask more questions.
+
+At the beginning of this thesis, it was hard to know what the impact of the
+work here would be, quickly we realized that the impact had been large,
+
