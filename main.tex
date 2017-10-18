@@ -74,8 +74,12 @@
 %                            instead of
 %
 %                              1 Title of Chapter
-\documentclass[12pt,chapterheads]{ucsd}
-
+\def\RELEASE{}
+\ifdefined\RELEASE
+    \documentclass[12pt,chapterheads]{ucsd}
+\else
+    \documentclass[12pt,chapterheads,draft]{ucsd}
+\fi
 
 
 % Include all packages you need here.  
@@ -191,7 +195,9 @@ work in this thesis by presenting a comprehensive survey of human-gut
 microbiome.  The following section appeared in the journal of \textsl{Annual
 Reviews, 2017}.
 
-% \include{chapter_review}
+\ifdefined\RELEASE
+    \include{chapter_review}
+\fi
 
 \chapter{Exploratory microbiome data visualization}\label{exploratory_chapter}
 
@@ -233,8 +239,10 @@ microbiome data. Section~\ref{section_emperor} was published in the journal
 \textsl{GigaScience, 2013} and Section~\ref{section_animations} was published 
 in the journal \textsl{Cell Host \& Microbe, 2017}.
 
-\include{chapter_EMPeror}
-\include{chapter_animations}
+\ifdefined\RELEASE
+    \include{chapter_EMPeror}
+    \include{chapter_animations}
+\fi
 
 \chapter{Inflammatory bowel disease in Dogs and Humans}\label{chapter_dogs}
 
@@ -269,7 +277,9 @@ we uncover a taxon that shifts from being non \gls{ibd}-associated in humans to
 being \gls{ibd}-associated in dogs.  Section~\ref{dogs} appeared in the journal 
 \textsl{Nature Microbiology, 2016}.
 
-\include{chapter_dogs}
+\ifdefined\RELEASE
+    \include{chapter_dogs}
+\fi
 
 \chapter{Dynamic features of inflammatory bowel disease}\label{chapter_ibds}
 
@@ -305,8 +315,10 @@ interest.
 Section~\ref{plane} appeared in \textsl{Nature Microbiology, 2017}, and 
 Section~\ref{ibd} appeared in \dots
 
-\include{chapter_plane}
-\include{chapter_ibd}
+\ifdefined\RELEASE
+    \include{chapter_plane}
+    \include{chapter_ibd}
+\fi
 
 \chapter{Restoring a lost ecosystem}\label{chapter_fmts}
 \glsresetall
@@ -341,8 +353,10 @@ Both sections (Section~\ref{section_moviefmt} and Section~\ref{section_fmt})
 were published in the journal \textsl{Microbiome} in \textsl{2015} and 
 \textsl{2017} respectively.
 
-\include{chapter_moviefmt}
-\include{chapter_fmt}
+\ifdefined\RELEASE
+    \include{chapter_moviefmt}
+    \include{chapter_fmt}
+\fi
 
 \chapter{Conclusions}
 
