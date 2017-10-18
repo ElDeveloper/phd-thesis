@@ -9,35 +9,36 @@ biology, to get us closer towards a future where drug prescription, diet and
 recreational activities can be further \textit{personalized} -- through a layer
 invisible to the naked eye but perceivable in most respects of life.
 
-It seems impossible to accurately predict the impact of scientific discoveries,
-historically, we have seen great evidence of seemingly anachronistic findings
-(for example neural networks \cite{Tem10}) that later, usually
-when other technologies catch up, become new fields of research or cornerstones
-in consumer applications.  Therefore, while acknowledging this is a tough
-problem, here I present my personal view on future directions that can build up
-from some of the contributions in this thesis. I divide these into three 
-sections: diagnostic methods, treatment and analysis.
+It seems impossible to accurately predict the impact of scientific discoveries, 
+historically, we have seen great evidence of seemingly anachronistic findings 
+(for example neural networks \cite{Tem10}) that later, usually when other 
+technologies catch up, become new fields of research or cornerstones in 
+consumer applications.  Therefore, while acknowledging this is a tough problem, 
+I present my personal view on future directions that can build up from the 
+contributions in this thesis. I divide these into three sections: diagnostic 
+methods, treatment and analysis.
 
 \section{Diagnostic Methods}
 
 In Chapter~\ref{chapter_dogs} and Chapter~\ref{chapter_ibds}, we presented
-examples of \gls{ibd} and \gls{cd} biomarkers from two different analytical 
+examples of biomarkers for \gls{ibd} and \gls{cd} from two different analytical 
 perspectives.  First, in a dog cohort, we showed that we can reformulate the 
 dysbiosis index we originally developed for humans \cite{Gevers2014}, and make 
-it specific for a different host\hyp{}specie. Both in humans and dogs, this 
+it specific for a different host\hyp{}species. Both in humans and dogs, this 
 log-ratio of bacterial groups is associated with decreased diversity, and in 
-humans is also associated with inflammation. Next, after noticing the increased 
-volatility in the microbiome of subjects with \gls{ibd}, we benchmarked 
-microbial variability in fecal samples as an effective classifier for disease.  
-This method is powerful because it overcomes the low classification accuracy of 
-fecal samples, and improves as more samples per subject are collected.
+humans, it is also associated with inflammation. Next, after noticing the 
+increased volatility in the microbiome of subjects with \gls{ibd}, we 
+benchmarked microbial variability in fecal samples as an effective classifier 
+for disease.  This method is powerful, because it overcomes the low 
+classification accuracy of fecal samples, and improves as more samples per 
+subject are collected.
 
 Although both approaches are encouraging, translating research into 
 consumer\hyp{}level applications, commonly presents formidable challenges that 
 might only be solvable by future generations.  Take for example the \gls{ecg}, 
 it took almost 125 years, between the first observation of 
 biopotentials\footnote{Credited to Luigi Galvani in 1787.}, and the moment when 
-the first table \gls{ecg}\footnote{Willem Einthoven's ectrocardiograph 
+the first table \gls{ecg}\footnote{Willem Einthoven's ectrocardiograph was 
 manufactured by the Cambridge Scientific Instrument Company of London in 1911.} 
 became commercially available \cite{ECGZywietz}. Even after the tremendous 
 progress, proper validation of computer-generated diagnostics only appeared 
@@ -48,32 +49,32 @@ I use the example of the \gls{ecg}, because much like raw heart biopotentials,
 determining the appropriate filters and thresholds directly depends on the
 use-case. However, unlike with the early developments of the \gls{ecg}, we live
 in digital and connected world. As such, the following focuses will
-shorten the time between discovery and innovation:
+shorten the time between future discoveries and innovation:
 
 \begin{description}
+    \item[Mechanistic Studies]The novelty characteristic of microbiome studies, 
+        has produced a large amount of descriptive studies, contrastingly, 
+        mechanistic experiments have lagged in validating several of these 
+        findings (likely due to the more expensive requirements).  If the goal 
+        is to relate the presence or abundance of a microbiome feature to 
+        disease state or biochemical process, the underlying methods must be 
+        informed by biological inferences in order for these biomarkers to be 
+        credible.
 
-  \item[Mechanistic Studies]The novelty characteristic of microbiome studies,
-  has produced a large amount of descriptive studies, contrastingly,
-  mechanistic experiments have lagged in validating many of these findings 
-  (likely due to the more expensive requirements).  If the goal is to relate 
-  the presence or abundance of a microbiome feature to disease state or 
-  biochemical process, the underlying methods must be informed
-  by biological inferences in order for these biomarkers to be credible.
-
-  \item[Open Data]Medical research is specially affected by human factors,
-  being able to consistently collect samples from a subject is not always easy
-  or deterministic (think of bowel problems and fecal samples). A powerful
-  practice used to counter underpowered studies, is to improve on the current
-  sample size through the reuse of previously published data. The availability
-  of open resources like Qiita\footnote{\url{https://qiita.ucsd.edu/}}, makes
-  data reuse seamless. Importantly, the work in this thesis was only possible
-  through the reuse of existing data (see Chapter~\ref{exploratory_chapter}
-  through Chapter~\ref{chapter_fmts}).
-  Although making data openly available is an important first step, proper
-  standardization of processing protocols, will also be key to maximizes data 
-  re-usability, a remarkable example of this practice is the \gls{emp} 
-  \cite{RN4267}.
-
+    \item[Open Data]Medical research is specially affected by human factors, 
+        being able to consistently collect samples from a subject is not always 
+        easy or deterministic (think of bowel problems and fecal samples). A 
+        powerful practice used to counter underpowered studies, is to improve 
+        on the current sample size through the reuse of previously published 
+        data. The availability of open resources like 
+        Qiita\footnote{\url{https://qiita.ucsd.edu/}}, makes data reuse 
+        seamless. Importantly, the work in this thesis was only possible 
+        through the reuse of existing datasets (see 
+        Chapter~\ref{exploratory_chapter} through Chapter~\ref{chapter_fmts}).  
+        Although making data openly available is an important first step, 
+        proper standardization of processing protocols, will also be key to 
+        maximizes data re-usability, a remarkable example of this practice is 
+        the \gls{emp} \cite{RN4267}.
 \end{description}
 
 \section{Treatment}
@@ -82,8 +83,8 @@ Microbiome\hyp{}based treatments, are generally based on the transplantation of
 microbial communities from a \textit{healthy} donor into an affected 
 \textit{recipient}. Three spearheading examples are: \glspl{fmt} to treat 
 \gls{cdi} \cite{RN4129}, skin microbiomes transplants to treat atopic 
-dermatitis \cite{GalloSkin}, and (although still in early stages) a concentrate 
-of microbial spores to treat \gls{uc} by Seres Therapeutics.
+dermatitis \cite{GalloSkin}, and (although still in early stages) a capsule 
+full of microbial spores to treat \gls{uc} by Seres Therapeutics.
 
 Although most \glspl{fmt} succeed at treating \gls{cdi}, what makes a
 successful transplant is not clear yet, the number of variables implicated in
@@ -96,7 +97,9 @@ makes a successful transplant but also what makes a failed one.  For example,
 the impact of the work presented in Section~\ref{section_fmt} could have been 
 magnified, if we had included subjects for which the \gls{fmt} failed. With 
 appropriate sample sizes, we could have applied a number of techniques to 
-single out (if any) the features common that lead to a failed transplant.
+single out (if any) the features common that lead to a failed transplant. With 
+this knowledge, we could pre-screen \textit{donors} and \textit{recipients} to 
+ensure a successful transplant.
 
 \section{Analysis}
 
@@ -114,19 +117,19 @@ generate data, and it is likely that this trend will continue. Emperor
 existing software, and more recently we had to re-architect the underlying 
 implementation to cope with modern and larger datasets.
 
-Flexibility and compliance with community standards, makes software available 
-to a wider audience. Take the count table, often acting as the core 
-data-structure for metabolomic, transcriptomic, proteomic, (and other 'omics) 
-analyses. If the software producing this data complies with a standard, like 
-the \gls{biom}-format, the end user is now free to select from a diversity of 
-methods not restricted to its own field of study. This idea is being taken a 
-step further with \gls{qiime} 2, where a semantic type system defines the 
-methods and visualizations that can be applied to a given dataset.
+Flexibility and compliance with community standards, makes software available
+to a wider audience. Take the count table, often acting as the core
+data-structure for metabolomic, transcriptomic, proteomic, (and other 'omics)
+analyses. If the software producing this data complies with a standard, like
+the \gls{biom}-format, the end user is now free to select from a variety of
+methods as opposed to being limited to nieche-software. This idea is being
+taken a step further with \gls{qiime} 2, where a semantic type system defines
+the methods and visualizations that can be applied to a given dataset.
 
-Finally, the value of interactively exploring a dataset, lies on our ability to 
-quickly test hypothesis, and come up with new ones. Future exploratory analysis 
-tools should be developed with interoperability in mind, for example, brushing 
-to select a group of samples in a view of data might act as a filter for a 
-different representation. Modern web technologies, and software development 
-frameworks like \gls{qiime} 2 will likely be the pioneers of these global 
-overviews of microbial diversity.
+Finally, the value of interactively exploring a dataset, lies on our ability to
+quickly test hypotheses, and iteratively develop new ones. Future exploratory
+analysis tools should be developed with interoperability in mind, for example,
+brushing to select a group of samples in a view of data might act as a filter
+for a different representation. Modern web technologies, and software
+development frameworks like \gls{qiime}2 will likely be the pioneers of these
+global overviews of microbial diversity.

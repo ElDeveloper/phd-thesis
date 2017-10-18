@@ -172,25 +172,26 @@
 \chapter{The hidden world within ourselves}\label{chapter_review}
 
 Recent years have seen an increased interest in the study of microbial
-communities, partly driven by the affordability of the enabling technologies,
-this new focus provides a previously ignored axis of understanding to a vast
+communities, partly driven by the affordability of the enabling technologies.
+This new focus provides a previously ignored axis of understanding to a vast
 number of research fields. In addition, this has uncovered a number of
 associations and demonstrated mechanisms, where microbial communities are key
 explanatory variables.
 
 In fields where microbial communities were already taken into consideration,
-these advancements allowed experiments to be conducted at an unprecedented 
-scale \cite{RN35, RN4061, RN4267}. As a consequence the underlying software and 
-methods to analyze these studies needed to accommodate volumes of information
-previously unseen. Notably, most of the software used in this context has been
-developed as a consequence of interdisciplinary experiments that span a broad
-range of seemingly disjoint fields (biofuel development \cite{RN4268}, built 
-environment \cite{RN4270, RN4083}, forensics \cite{RN4269, RN4271}, etc).  As 
-such we motivate the rest of the work in this thesis by presenting a survey of 
-human-gut associated finding in the microbiome.  The following section 
-appeared in the journal of \textsl{Annual Reviews, 2017}.
+these advancements allowed experiments to be conducted at an unprecedented
+scale \cite{RN35, RN4061, RN4267}. As a consequence, the underlying software
+and methods to analyze these studies needed to accommodate volumes of
+information previously unseen. Notably, most of the software used in this
+context has been developed to interpret and analyze interdisciplinary
+experiments that span a broad range of seemingly disjoint fields (for example
+biofuel development \cite{RN4268}, built environment \cite{RN4270, RN4083},
+forensics \cite{RN4269, RN4271}, etc).  As such, we motivate the rest of the
+work in this thesis by presenting a comprehensive survey of human-gut
+microbiome.  The following section appeared in the journal of \textsl{Annual
+Reviews, 2017}.
 
-\include{chapter_review}
+% \include{chapter_review}
 
 \chapter{Exploratory microbiome data visualization}\label{exploratory_chapter}
 
@@ -215,7 +216,7 @@ Emperor is an interactive $\beta$-diversity viewer, tailored to fit the
 ordinations or dimensionality reductions, are often the starting point when 
 analyzing a microbiome dataset. Their ability to overview the relative 
 differences of an unlimited number of samples with an unlimited number of 
-covariates at a time, makes them useful to diagnose and troubleshoot any 
+covariates at a time, makes them invaluable to diagnose and troubleshoot any 
 problems that may have occurred during sample collection, preparation or 
 processing. For example, batch effects are often easy to notice in this 
 representation\cite{Gibbons165910}, but more challenging to see in 
@@ -277,14 +278,14 @@ In recent years, clinical research in \gls{ibd} has benefited from multi-'omic
 characterizations of the condition. Each describing a new component of 
 relationships, that one by one, seem to uncover the processes regulating the 
 inflammation and well-being of the affected hosts. Nonetheless longitudinal 
-descriptions of the disease seemed to be lagging behind.
+descriptions of the disease seemed to be largely unexplored.
 
-This chapter introduces two of the pioneering longitudinal studies of 
-\gls{ibd}, one where the sampling is sparse (every three months) and another 
-where the sampling is dense (as much as every day). Both cohorts present 
-increased rates of microbial variation, specifically we see that this appears 
-to be different for the different subtypes of \gls{ibd}. In order to visualize 
-the increased variation, we rely on the techniques introduced in 
+This chapter introduces two pioneering longitudinal studies of \gls{ibd},one 
+where the sampling is sparse (every three months) and another where the 
+sampling is dense (as much as every day). Both cohorts present increased rates 
+of microbial variation, specifically we see that this appears to be different 
+for the different subtypes of \gls{ibd}. In order to visualize the increased 
+variation, we rely on the techniques introduced in 
 Chapter~\ref{exploratory_chapter}, and on the creation of a reference plane 
 that acts as a proxy for healthy variation.
 
@@ -293,7 +294,7 @@ benefits of increased longitudinal sampling. For both (independently collected
 and sequenced) datasets, we observe that including more than one sample per 
 subject increases the performance of a classifier. This property is only 
 possible when we create per-subject consensus features based on multiple 
-samples.
+timepoints.
 
 Although we exercise and test this method with human-gut data, the approach is 
 not restricted in any way to this environment, other applications can benefit, 
@@ -312,8 +313,8 @@ Section~\ref{ibd} appeared in \dots
 
 \gls{cdi} is a hospital-acquired infection resulting from antibiotic 
 administration for an unrelated condition. Paradoxically, the treatment for 
-\gls{cdi} is to prescribe more antibiotics. This treatment translates in
-depleted microbial diversity, as a consequence, resources that could be 
+\gls{cdi} is to prescribe more antibiotics. This treatment generally translates 
+in depleted microbial diversity, as a consequence, resources that could be 
 consumed by other communities are now available for \textit{Clostridium 
 difficile} to thrive on.  More recently \gls{cdi} has been treated through the 
 administration of \glspl{fmt}, with a success rate above 90\%\cite{RN4129}. A 
