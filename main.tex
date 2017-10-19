@@ -259,28 +259,25 @@ inflammation and flaring episodes of exacerbated discomfort. In general,
 diagnostic methods rely on questionnaires, direct examinations of affected 
 intestinal tissue, or quantification of calprotectin \cite{Sipponen2008}.
 
-Our understanding of the community dynamics that take place in subjects with 
-\gls{ibd} is extensive, though regrettably not sufficient. One major aspect 
-that has yet to be explored is the inter-species similarities of their 
-microbial communities. Making sense out of the interactions that take place in 
-otherwise different systems, could potentially lead the way to fully comprehend 
-the exogenous and endogenous factors that cause and regulate this family of 
-conditions.
-
 In this chapter, we introduce work motivated by our recent efforts at 
 characterizing the microbiome in new-onset and treatment-naive Crohn's disease 
 subjects \cite{RN154}. Specifically, we focus on comparing the microbiomes of 
 \gls{ibd} affected humans and dogs. As a result, we further expanded the 
 repertoire of features that we know and associate with \gls{ibd} in dogs 
-\cite{RN153}, but most importantly we use this new information and through a 
-meta-analysis, we contextualize it with human fecal samples
-\cite{RN154}.  We find that the dysbiosis networks\footnote{A dysbiosis network 
-is the graph resulting from using a correlation matrix as a weighted adjacency 
-matrix.} are overlapping, both in structure and in the microbes that are 
-associated with the \gls{ibd} and non-\gls{ibd} affected communities, however, 
-we uncover a taxon that shifts from being non \gls{ibd}-associated in humans to 
-being \gls{ibd}-associated in dogs.  Section~\ref{dogs} appeared in the journal 
-\textsl{Nature Microbiology, 2016}.
+\cite{RN153}, and through a meta-analysis contextualize them with human fecal 
+samples \cite{RN154}.
+
+As we did before \cite{RN154}, we create a dysbiosis network\footnote{A 
+dysbiosis network is a graph constructed using a correlation matrix as a 
+weighted adjacency matrix.} to statistically infer the bacterial genera 
+associated with the disease. This representation allows us to directly compare 
+microbial groups across datasets, and their relationship to each other. We find 
+that the human and dog dysbiosis networks are overlapping, both in structure 
+and in the microbes associated with \gls{ibd} and non-\gls{ibd} communities, 
+however, we uncover a taxon that shifts from being non \gls{ibd}-associated in 
+humans to being \gls{ibd}-associated in dogs.
+
+Section~\ref{dogs} appeared in the journal \textsl{Nature Microbiology, 2016}.
 
 \ifdefined\RELEASE
     \include{chapter_dogs}
@@ -295,28 +292,31 @@ In recent years, clinical research in \gls{ibd} has benefited from multi-'omic
 \cite{RN4263}) characterizations of the condition. Each describing a new 
 component of relationships, that one by one, seem to uncover the processes 
 regulating the inflammation and well-being of the affected hosts. Nonetheless 
-longitudinal descriptions of the disease seemed to be largely unexplored.
+longitudinal descriptions (and as a consequence representations) of \gls{ibd} 
+were largely unexplored.
 
-This chapter introduces two pioneering longitudinal studies of \gls{ibd},one 
+This chapter introduces two pioneering longitudinal studies of \gls{ibd}, one 
 where the sampling is sparse (every three months) and another where the 
 sampling is dense (as much as every day). Both cohorts present increased rates 
 of microbial variation, specifically we see that this appears to be different 
 for the different subtypes of \gls{ibd}. In order to visualize the increased 
 variation, we rely on the techniques introduced in 
-Chapter~\ref{exploratory_chapter}, and on the creation of a reference plane 
+Chapter~\ref{exploratory_chapter}, and on the definition of a reference plane 
 that acts as a proxy for healthy variation.
 
-Motivated by these findings, we use a classification model to determine the 
-benefits of increased longitudinal sampling. For both (independently collected 
-and sequenced) datasets, we observe that including more than one sample per 
-subject increases the performance of a classifier. This property is only 
-possible when we create per-subject consensus features based on multiple 
-timepoints.
+Motivated by these findings, we use an unsupervised classification model to 
+determine the benefits of increased longitudinal sampling. For both 
+(independently collected and sequenced) datasets, we observe that including 
+more than one sample per subject increases the performance of a classifier.  
+This property is only possible when transform the original representation of 
+the data, and create per-subject consensus features based on multiple 
+timepoints. Briefly, these features aggregate multiple samples together, and 
+exploit the increased instability as an informative classification feature.
 
 Although we exercise and test this method with human-gut data, the approach is 
-not restricted in any way to this environment, other applications can benefit, 
-specifically where dynamic descriptors might be predictive of a state of 
-interest.
+not restricted in any way to this environment. This approach could potentially 
+benefit other applications, specially where longitudinal descriptors might be 
+predictive of a state of interest.
 
 % TODO: add publication
 Section~\ref{plane} appeared in \textsl{Nature Microbiology, 2017}, and 
