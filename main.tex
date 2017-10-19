@@ -191,64 +191,69 @@ context has been developed to interpret and analyze interdisciplinary
 experiments that span a broad range of seemingly disjoint fields (for example
 biofuel development \cite{RN4268}, built environment \cite{RN4270, RN4083},
 forensics \cite{RN4269, RN4271}, etc).  As such, we motivate the rest of the
-work in this thesis by presenting a comprehensive survey of human-gut
-microbiome.  The following section appeared in the journal of \textsl{Annual
-Reviews, 2017}.
+work in this thesis by presenting a comprehensive survey focused on the human 
+microbiome.  The following section appeared in the journal
+\textsl{Annual Reviews, 2017}.
 
 \ifdefined\RELEASE
     \include{chapter_review}
+\else
+    \section{Annual Reviews Paper}
 \fi
 
-\chapter{Exploratory microbiome data visualization}\label{exploratory_chapter}
+\chapter{Exploratory microbiome data analysis}\label{exploratory_chapter}
 
 As we learnt in Chapter~\ref{chapter_review}, there's a wealth of information 
 that can be acquired through the study of microbial communities. The 
 acquisition of this knowledge, however, is often only possible through the 
-usage of specialized software for analysis and visualization. As noted before, 
-\gls{qiime} is a successful\footnote{At the moment of this writing the original 
-paper has been cited over 8,000 times according to Google Scholar, and the 
-Python package has been downloaded over 34,000 times, data from 
+usage of specialized software for analysis and visualization. \gls{qiime}, 
+introduced previously, is a successful\footnote{At the moment of this writing 
+the original paper has been cited over 8,000 times according to Google Scholar, 
+and the Python package has been downloaded over 34,000 times, data from 
 \url{https://pypi.org} and \url{https://anaconda.org}.} microbiome analysis 
 pipeline that integrates a collection of bioinformatics tools, and makes these 
 programs available through a unified user-interface. Until its fifth release, 
-\gls{qiime} relied on \gls{king} to display three-dimensional $\beta$-diversity 
-plots. \gls{king} was originally developed as a molecular viewer, and was 
-\textit{hacked} to act as a scatter-plot viewer. As datasets got larger and 
-more common, it became clear that we needed to develop our own solution, thus 
-we created Emperor.
+\gls{qiime} relied on \gls{king} to represent three-dimensional 
+$\beta$-diversity plots. \gls{king} was originally developed as a molecular 
+viewer, and was \textit{hacked} to act as a scatter-plot viewer. As datasets 
+got larger and more common, it became clear that we needed to develop our own 
+solution, thus we created Emperor.
 
 Emperor is an interactive $\beta$-diversity viewer, tailored to fit the 
 \gls{qiime} ecosystem. $\beta$-diversity plots, commonly referred to as 
 ordinations or dimensionality reductions, are often the starting point when 
 analyzing a microbiome dataset. Their ability to overview the relative 
 differences of an unlimited number of samples with an unlimited number of 
-covariates at a time, makes them invaluable to diagnose and troubleshoot any 
-problems that may have occurred during sample collection, preparation or 
+covariates, makes this representation invaluable to diagnose and troubleshoot 
+any problems that may have occurred during sample collection, preparation or 
 processing. For example, batch effects are often easy to notice in this 
-representation\cite{Gibbons165910}, but more challenging to see in 
-feature-level analyses, specially if those features specifically are not 
-affected by the batch effects.
+representation \cite{Gibbons165910}, but more challenging to see in 
+feature-level analyses, specially if those specific features are 
+not affected by the batch effects.
 
 As use-cases arose, these were integrated as part of the software, something 
-that was not previously possible with \gls{king}. A notable feature, was 
-allowing users to animate longitudinal sampling schemes, this ability was of 
-key importance for the work in Chapter~\ref{chapter_ibds} and 
-Chapter~\ref{chapter_fmts}. The following two sections introduce Emperor, and 
-further discuss the use of animated ordinations as a way to interact with 
-microbiome data. Section~\ref{section_emperor} was published in the journal 
-\textsl{GigaScience, 2013} and Section~\ref{section_animations} was published 
-in the journal \textsl{Cell Host \& Microbe, 2017}.
+previously not possible with \gls{king}. A notable feature, was allowing users 
+to animate longitudinal sampling schemes, this ability was of key importance 
+for the work in Chapter~\ref{chapter_ibds} and Chapter~\ref{chapter_fmts}. The 
+following two sections introduce Emperor, further discussing some of its 
+statistical capabilities, and the use of animated ordinations as a way to 
+interact with microbiome data.  Section~\ref{section_emperor} was published in 
+the journal \textsl{GigaScience, 2013} and Section~\ref{section_animations} was 
+published in the journal \textsl{Cell Host \& Microbe, 2017}.
 
 \ifdefined\RELEASE
     \include{chapter_EMPeror}
     \include{chapter_animations}
+\else
+    \section{EMPeror paper}\label{section_emperor}
+    \section{EMPeror Animations paper}\label{section_animations}
 \fi
 
 \chapter{Inflammatory bowel disease in Dogs and Humans}\label{chapter_dogs}
 
-\gls{ibd} is a family of conditions divided into two major categories, \gls{uc} 
-and \gls{cd}, each of which can be divided into other subtypes specifying 
-location, age of diagnosis, severity and behaviour of the disease 
+\gls{ibd} is a family of conditions divided in two major categories, \gls{uc} 
+and \gls{cd}, each of which can be further divided into other subtypes 
+specifying location, age of diagnosis, severity and behaviour of the disease 
 \cite{RN4265}.  In all cases \gls{ibd} is associated with diarrhea, 
 inflammation and flaring episodes of exacerbated discomfort. In general, 
 diagnostic methods rely on questionnaires, direct examinations of affected 
@@ -268,27 +273,29 @@ subjects \cite{RN154}. Specifically, we focus on comparing the microbiomes of
 \gls{ibd} affected humans and dogs. As a result, we further expanded the 
 repertoire of features that we know and associate with \gls{ibd} in dogs 
 \cite{RN153}, but most importantly we use this new information and through a 
-meta-analysis, we contextualize it with data collected from humans 
+meta-analysis, we contextualize it with human fecal samples
 \cite{RN154}.  We find that the dysbiosis networks\footnote{A dysbiosis network 
 is the graph resulting from using a correlation matrix as a weighted adjacency 
 matrix.} are overlapping, both in structure and in the microbes that are 
-associated with the \gls{ibd} and non-\gls{ibd} affected communities, however 
+associated with the \gls{ibd} and non-\gls{ibd} affected communities, however, 
 we uncover a taxon that shifts from being non \gls{ibd}-associated in humans to 
 being \gls{ibd}-associated in dogs.  Section~\ref{dogs} appeared in the journal 
 \textsl{Nature Microbiology, 2016}.
 
 \ifdefined\RELEASE
     \include{chapter_dogs}
+\else
+    \section{IBD dogs paper}\label{dogs}
 \fi
 
 \chapter{Dynamic features of inflammatory bowel disease}\label{chapter_ibds}
 
 In recent years, clinical research in \gls{ibd} has benefited from multi-'omic 
-(genomic\cite{RN4217}, metabolomic\cite{RN4264} and metagenomic\cite{RN4263}) 
-characterizations of the condition. Each describing a new component of 
-relationships, that one by one, seem to uncover the processes regulating the 
-inflammation and well-being of the affected hosts. Nonetheless longitudinal 
-descriptions of the disease seemed to be largely unexplored.
+(genomic \cite{RN4217}, metabolomic \cite{RN4264} and metagenomic 
+\cite{RN4263}) characterizations of the condition. Each describing a new 
+component of relationships, that one by one, seem to uncover the processes 
+regulating the inflammation and well-being of the affected hosts. Nonetheless 
+longitudinal descriptions of the disease seemed to be largely unexplored.
 
 This chapter introduces two pioneering longitudinal studies of \gls{ibd},one 
 where the sampling is sparse (every three months) and another where the 
@@ -318,6 +325,9 @@ Section~\ref{ibd} appeared in \dots
 \ifdefined\RELEASE
     \include{chapter_plane}
     \include{chapter_ibd}
+\else
+    \section{Janet's IBD paper}\label{plane}
+    \section{Balfour's IBD paper}\label{ibd}
 \fi
 
 \chapter{Restoring a lost ecosystem}\label{chapter_fmts}
@@ -329,7 +339,7 @@ administration for an unrelated condition. Paradoxically, the treatment for
 in depleted microbial diversity, as a consequence, resources that could be 
 consumed by other communities are now available for \textit{Clostridium 
 difficile} to thrive on.  More recently \gls{cdi} has been treated through the 
-administration of \glspl{fmt}, with a success rate above 90\%\cite{RN4129}. A 
+administration of \glspl{fmt}, with a success rate above 90\% \cite{RN4129}. A 
 \gls{fmt} consists in reintroducing bacteria into the \gls{gi} tract of an 
 affected patient. Frequently, after a day, the symptoms of \gls{cdi} disappear 
 and the recipients recover. In this chapter, we examine two cohorts and focus 
@@ -356,9 +366,12 @@ were published in the journal \textsl{Microbiome} in \textsl{2015} and
 \ifdefined\RELEASE
     \include{chapter_moviefmt}
     \include{chapter_fmt}
+\else
+    \section{FMT paper 1}\label{section_moviefmt}
+    \section{FMT paper 2}\label{section_fmt}
 \fi
 
-\chapter{Conclusions}
+\chapter{Future Work}
 
 \include{chapter_conclusions}
 

@@ -23,11 +23,11 @@ examples of biomarkers for \gls{ibd} and \gls{cd} from two different analytical
 perspectives.  First, in a dog cohort, we showed that we can reformulate the 
 dysbiosis index we originally developed for humans \cite{Gevers2014}, and make 
 it specific for a different host\hyp{}species. Both in humans and dogs, this 
-log-ratio of bacterial groups is associated with decreased diversity, and in 
-humans, it is also associated with inflammation. Next, after noticing the 
-increased volatility in the microbiome of subjects with \gls{ibd}, we 
-benchmarked microbial variability in fecal samples as an effective classifier 
-for disease.  This method is powerful, because it overcomes the low 
+log-ratio of bacterial groups is associated with decreased phylogenetic 
+diversity, and in humans, it is also associated with inflammation.  Next, after 
+noticing the increased volatility in the microbiome of subjects with \gls{ibd}, 
+we benchmarked microbial variability in fecal samples as an effective 
+classifier for disease.  This method is powerful, because it overcomes the low 
 classification accuracy of fecal samples, and improves as more samples per 
 subject are collected.
 
@@ -54,17 +54,17 @@ shorten the time between future discoveries and innovation:
         has produced a large amount of descriptive studies, contrastingly, 
         mechanistic experiments have lagged in validating several of these 
         findings (likely due to the more expensive requirements).  If the goal 
-        is to relate the presence or abundance of a microbiome feature to 
+        is to relate the presence or abundance of a microbiome feature to a
         disease state or biochemical process, the underlying methods must be 
-        informed by biological inferences in order for these biomarkers to be 
-        credible.
+        informed by biological inferences in order for these biomarkers to gain 
+        credibility.
 
     \item[Open Data]Medical research is specially affected by human factors, 
         being able to consistently collect samples from a subject is not always 
         easy or deterministic (think of bowel problems and fecal samples). A 
         powerful practice used to counter underpowered studies, is to improve 
         on the current sample size through the reuse of previously published 
-        data. The availability of open resources like 
+        data. This approach is only possible through open resources like 
         Qiita\footnote{\url{https://qiita.ucsd.edu/}}, makes data reuse 
         seamless. Importantly, the work in this thesis was only possible 
         through the reuse of existing datasets (see 
@@ -82,7 +82,8 @@ microbial communities from a \textit{healthy} donor into an affected
 \textit{recipient}. Three spearheading examples are: \glspl{fmt} to treat 
 \gls{cdi} \cite{RN4129}, skin microbiomes transplants to treat atopic 
 dermatitis \cite{GalloSkin}, and (although still in early stages) a capsule 
-full of microbial spores to treat \gls{uc} by Seres Therapeutics.
+full of microbial spores to treat \gls{uc} by Seres 
+Therapeutics\footnote{\url{http://www.serestherapeutics.com}}.
 
 Although most \glspl{fmt} succeed at treating \gls{cdi}, what makes a
 successful transplant is not clear yet, the number of variables implicated in
@@ -97,7 +98,7 @@ magnified, if we had included subjects for which the \gls{fmt} failed. With
 appropriate sample sizes, we could have applied a number of techniques to 
 single out (if any) the features common that lead to a failed transplant. With 
 this knowledge, we could pre-screen \textit{donors} and \textit{recipients} to 
-ensure a successful transplant.
+ensure a successful treatment.
 
 \section{Analysis}
 
@@ -122,7 +123,7 @@ analyses. If the software producing this data complies with a standard, like
 the \gls{biom}-format, the end user is now free to select from a variety of
 methods as opposed to being limited to nieche-software. This idea is being
 taken a step further with \gls{qiime} 2, where a semantic type system defines
-the methods and visualizations that can be applied to a given dataset.
+the methods and visualizations that can be applied to any given dataset.
 
 Finally, the value of interactively exploring a dataset, lies on our ability to
 quickly test hypotheses, and iteratively develop new ones. Future exploratory
