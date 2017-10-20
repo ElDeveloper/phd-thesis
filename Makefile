@@ -1,6 +1,9 @@
 # StackOverflow suggests this as a general Makefile for latex
 # https://tex.stackexchange.com/a/318595/62076
 #
+# This Makefile depends on the file ./latexmkrc to be able to build the
+# glossary, as noted in: https://tex.stackexchange.com/a/1228/62076
+#
 # Tools
 LATEXMK = latexmk
 RM = rm -f
