@@ -16,12 +16,12 @@ pdf: $(DOCNAME).pdf
 # Rules
 %.pdf: %.tex
 	$(LATEXMK) -pdf -M -MP -MF $*.d $*
-	makeglossaries main
 	open main.pdf
 
 mostlyclean:
 	$(LATEXMK) -silent -c
 	$(RM) *.bbl
+	$(RM) *.glg *.glo *.gls *.ist # glossaries
 
 clean: mostlyclean
 	$(LATEXMK) -silent -C
