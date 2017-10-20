@@ -20,14 +20,71 @@ As expected based on results from human studies \cite{RN3999, RN154}, but not pr
 
 A random forests classifier \cite{RN4205} trained on the dog data achieved an \gls{auc} of 0.93 (Figure~\ref{dogs_fig1}C, see discriminant \glspl{otu} in Supplementary Table~1\footnote{\url{https://images.nature.com/original/nature-assets/nmicrobiol/2016/nmicrobiol2016177/extref/nmicrobiol2016177-s1.pdf}}), demonstrating excellent classification accuracy compared to human stool samples where the \gls{auc} was only 0.63 using a much larger training set \cite{RN154}, and achieved only \gls{auc} = 0.86 even using mucosal biopsies. Consequently, in dogs, but not in humans, high classifier accuracy is achievable for \gls{ibd} using only stool samples.
 
-Encouraged by these results, we tested whether a dysbiosis (see supplemental methods) network trained on stool samples alone could be used to interpret the pattern of \gls{ibd} in dogs, and whether this pattern overlapped the human network. We previously found that in humans, substantially better correlation networks could be achieved from the mucosal biopsies, because many taxa contributing to these networks were not seen in stool. Accordingly, we used the techniques described \cite{RN154} to generate correlation networks and a dysbiosis index for dog samples (see supplemental methods for more information). Using the network together with the biplots (Figure~\ref{dogs_fig1}B) we see that Gammaproteobacteria (specifically \textit{Enterobacteriaceae}) were significantly associated with \gls{ibd}, whereas various Firmicutes such as Clostridium and \textit{Ruminococcus} were associated with non-\gls{ibd} samples. When these features are compared with the discriminant \glspl{otu}, obtained from the random forests classifier, we observe a general overlap of the lineages (see Supplementary Table 1 and Supplementary Table 2\footnote{\label{sup}\url{https://images.nature.com/original/nature-assets/nmicrobiol/2016/nmicrobiol2016177/extref/nmicrobiol2016177-s1.pdf}}). However we also see \glspl{otu} that are not highlighted by the correlation network. Specifically Erysipelotrichaceae \textit{Allobaculum} and Lachnospiraceae \textit{Blautia producta}, this is likely because these do not consistently co-occur with or co-exclude other taxa.
+Encouraged by these results, we tested whether a dysbiosis (see supplemental 
+methods) network trained on stool samples alone could be used to interpret the 
+pattern of \gls{ibd} in dogs, and whether this pattern overlapped the human 
+network. We previously found that in humans, substantially better correlation 
+networks could be achieved from the mucosal biopsies, because many taxa 
+contributing to these networks were not seen in stool. Accordingly, we used the 
+techniques described \cite{RN154} to generate correlation networks and a 
+dysbiosis index for dog samples (see supplemental methods for more 
+information). Using the network together with the biplots 
+(Figure~\ref{dogs_fig1} B) we see that Gammaproteobacteria (specifically 
+\textit{Enterobacteriaceae}) were significantly associated with \gls{ibd}, 
+whereas various Firmicutes such as Clostridium and \textit{Ruminococcus} were 
+associated with non-\gls{ibd} samples. When these features are compared with 
+the discriminant \glspl{otu}, obtained from the random forests classifier, we 
+observe a general overlap of the lineages (see Supplementary Table 1 and 
+Supplementary Table 
+2\footnote{\label{sup}\url{https://images.nature.com/original/nature-assets/nmicrobiol/2016/nmicrobiol2016177/extref/nmicrobiol2016177-s1.pdf}}).  
+However we also see \glspl{otu} that are not highlighted by the correlation 
+network. Specifically Erysipelotrichaceae \textit{Allobaculum} and 
+Lachnospiraceae \textit{Blautia producta}, this is likely because these do not 
+consistently co-occur with or co-exclude other taxa.
 
-The human dysbiosis index failed to negatively correlate with alpha diversity in dog samples (Figure~\ref{dogs_fig2}A.1 and A.2 correlation, A.3 \gls{pcoa} plot), while a dog-specific dysbiosis index showed a statistically significant negative correlation in the same samples (Figure~\ref{dogs_fig2}B.1 and 2 B.2 correlation, C.3 \gls{pcoa} plot, see for a reference the two groups in Figure~\ref{dogs_fig2}D). Additionally we tested the index with previous data \cite{RN153}, and although the sample size is limited, we observed similar patterns (see Supplementary Figure 2\textsuperscript{\ref{sup}}). Similarly to humans, the dysbiosis index in dogs is negatively correlated with phylogenetic diversity (r = -0.45, p $<$ 0.001). However, the list of `non-\gls{ibd}' (co-occurring in non-\gls{ibd} samples) and `\gls{ibd}' (co-occurring in \gls{ibd} samples) bacteria only partially overlaps between host species (see Supplementary Table~2\textsuperscript{\ref{sup}}). Comparing the correlation networks of the taxa for humans (as described in \cite{RN154}) and the network generated for the dog data (Figure~\ref{dogs_fig2}C) revealed overlapping, and discordant taxa. In particular, \textit{Fusobacterium} appears to be associated with \gls{ibd} \cite{RN154} and colorectal cancer \cite{RN3983} in humans but with non-\gls{ibd} dog samples. Of note, we previously observed high levels of \textit{Fusobacterium} sp. in dogs \cite{RN150} but also carnivores of multiple species \cite{RN8250, RN114}, and noted higher levels of \textit{Fusobacterium} in dogs with more access to the outdoors \cite{RN4082}, which may correlate with a wide intake of other immunomodulatory environmental bacteria. Given the limited adaptation (approximately 8.9 Mya when humans split from Gorillas \cite{RN3988}) of the human lineage (historically omnivorous \cite{RN3987}) to a carnivorous diet, as compared to the base of the Carnivora 40-45 Mya \cite{RN3989}, it is possible that this taxon has yet to be incorporated into the non-\gls{ibd} portion of the network in humans. Nonetheless, it is important to remember this is only a statistical association, and further research would need to be developed to properly validate this. Consistent between human and canine networks and former studies were findings in regards to decreased \textit{Faecalibacterium} and increased \textit{Escherichia coli} in \gls{ibd} \cite{RN17138}, and these taxa seem to be important in this disease across animal hosts. Other taxa (\textit{Enterococcus} and \textit{Allobaculum}) from the canine network that were associated with \gls{ibd} or non-\gls{ibd} are generally consistent with previous results based on either small scale studies or targeted \gls{pcr} \cite{RN153}, but additional taxa were discovered here, such as \textit{Butyricoccus} which was associated with non-\gls{ibd} dogs.
+The human dysbiosis index failed to negatively correlate with alpha diversity 
+in dog samples (Figure~\ref{dogs_fig2} A.1 and A.2 correlation, A.3 \gls{pcoa} 
+plot), while a dog-specific dysbiosis index showed a statistically significant 
+negative correlation in the same samples (Figure~\ref{dogs_fig2} B.1 and 2 B.2 
+correlation, C.3 \gls{pcoa} plot, see for a reference the two groups in 
+Figure~\ref{dogs_fig2} D). Additionally we tested the index with previous data 
+\cite{RN153}, and although the sample size is limited, we observed similar 
+patterns (see Supplementary Figure 2\textsuperscript{\ref{sup}}). Similarly to 
+humans, the dysbiosis index in dogs is negatively correlated with phylogenetic 
+diversity (r = -0.45, p $<$ 0.001). However, the list of `non-\gls{ibd}' 
+(co-occurring in non-\gls{ibd} samples) and `\gls{ibd}' (co-occurring in 
+\gls{ibd} samples) bacteria only partially overlaps between host species (see 
+Supplementary Table~2\textsuperscript{\ref{sup}}). Comparing the correlation 
+networks of the taxa for humans (as described in \cite{RN154}) and the network 
+generated for the dog data (Figure~\ref{dogs_fig2} C) revealed overlapping, and 
+discordant taxa. In particular, \textit{Fusobacterium} appears to be associated 
+with \gls{ibd} \cite{RN154} and colorectal cancer \cite{RN3983} in humans but 
+with non-\gls{ibd} dog samples. Of note, we previously observed high levels of 
+\textit{Fusobacterium} sp. in dogs \cite{RN150} but also carnivores of multiple 
+species \cite{RN8250, RN114}, and noted higher levels of \textit{Fusobacterium} 
+in dogs with more access to the outdoors \cite{RN4082}, which may correlate 
+with a wide intake of other immunomodulatory environmental bacteria. Given the 
+limited adaptation (approximately 8.9 Mya when humans split from Gorillas 
+\cite{RN3988}) of the human lineage (historically omnivorous \cite{RN3987}) to 
+a carnivorous diet, as compared to the base of the Carnivora 40-45 Mya 
+\cite{RN3989}, it is possible that this taxon has yet to be incorporated into 
+the non-\gls{ibd} portion of the network in humans. Nonetheless, it is 
+important to remember this is only a statistical association, and further 
+research would need to be developed to properly validate this. Consistent 
+between human and canine networks and former studies were findings in regards 
+to decreased \textit{Faecalibacterium} and increased \textit{Escherichia coli} 
+in \gls{ibd} \cite{RN17138}, and these taxa seem to be important in this 
+disease across animal hosts. Other taxa (\textit{Enterococcus} and 
+\textit{Allobaculum}) from the canine network that were associated with 
+\gls{ibd} or non-\gls{ibd} are generally consistent with previous results based 
+on either small scale studies or targeted \gls{pcr} \cite{RN153}, but 
+additional taxa were discovered here, such as \textit{Butyricoccus} which was 
+associated with non-\gls{ibd} dogs.
 
 \begin{figure}[htbp]
 \includegraphics[width=1\columnwidth]{dogs-figures/figure-2}
 \label{dogs_fig2}
-\caption[Human and dog dysbiosis index.]{\textbf{Human and dog dysbiosis index.} (a.1), (a.2) Human dysbiosis index describing the dog samples grouped by disease status, (a.3) weighted UniFrac PCoA plot colored by dysbiosis index. (b.1) and (b.2) Dog dysbiosis index describing the dog samples grouped by disease state, (b.3) weighted UniFrac PCoA plot colored by dysbiosis index. (c) Correlation network used to determine the dysbiosis index in dogs, colored by the bacteria associated with IBD and non-IBD samples, co-exclusion edges are showed in dotted lines and co-occurrence edges are showed in solid lines. (d) Unweighted UniFrac PCoA plot of the dog data. Figures a.1, a.2, b.1 and b.2 all display 95\% confidence intervals.}
+\caption[Human and dog dysbiosis index.]{\textbf{Human and dog dysbiosis index.} (a.1), (a.2) Human dysbiosis index describing the dog samples grouped by disease status, (a.3) weighted UniFrac PCoA plot colored by dysbiosis index. (b.1) and (b.2) Dog dysbiosis index describing the dog samples grouped by disease state, (b.3) weighted UniFrac PCoA plot colored by dysbiosis index. (c) Correlation network used to determine the dysbiosis index in dogs, colored by the bacteria associated with IBD and non-IBD samples, co-exclusion edges are showed in dotted lines and co-occurrence edges are showed in solid lines. (d) Unweighted UniFrac PCoA plot of the dog data. Figures A.1, A.2, B.1 and B.2 all display 95\% confidence intervals.}
 \end{figure}
 
 To measure the relative effect size of host-species and \gls{ibd}, we combined humans and dogs into a single \gls{pcoa} plot, marked by clinical status (Supplementary Figure~4\footnote{\label{sup2}\url{https://images.nature.com/original/nature-assets/nmicrobiol/2016/nmicrobiol2016177/extref/nmicrobiol2016177-s1.pdf}}). We demonstrate that at a microbial level the disease effect is smaller than the host effect (human vs. dog, Supplementary Figure 4 A\textsuperscript{\ref{sup2}}). Similarly the disease effect was weaker than the species effect when analyzing PICRUSt \cite{RN17472} metagenome prediction data (\gls{permanova} test grouping samples by disease status and by host-species using a binary Jaccard matrix, p=0.001, pseudo-F by disease 14.61, pseudo-F by species 52.59, Supplementary Figure 4 B\footnote{\label{sup3}\url{https://images.nature.com/original/nature-assets/nmicrobiol/2016/nmicrobiol2016177/extref/nmicrobiol2016177-s1.pdf}}), indicating that at both the compositional and predicted functional level, species is a more significant influence on the microbial community than disease (see supplemental methods and Supplementary Figure~3\textsuperscript{\ref{sup3}}). In both dogs and humans, predicted pathways were relatively similar across \gls{ibd} and non-\gls{ibd} samples, with the most abundant pathways across both groups in both species including `housekeeping' pathways such as transporters, ABC transporters, DNA repair and recombination proteins, ribosome, purine metabolism, transcription factors, peptidases, pyrimidine metabolism, and chromosome (Supplementary Figure~5\textsuperscript{\ref{sup3}}). Although these most abundant pathways were not significantly associated with health or disease, the abundance of several lower abundance pathways was significantly different across \gls{ibd} and non-\gls{ibd} samples in dogs, see Supplementary Table~3\textsuperscript{\ref{sup3}}. No pathways were significantly higher in between disease statuses in humans.
@@ -86,14 +143,6 @@ Raw sequences for the dog samples have been deposited to the \gls{ena} at the fo
 The data for the human dataset\cite{RN154} can be found in the \gls{ena} at the following accession numbers ERP015241 and ERP015242, equivalent processed \gls{otu} tables and metadata can be accessed through Qiita\textsuperscript{\ref{qiitaurl}} under study identifiers 1939 and 1998 -`The Treatment-Naive Microbiome in New-Onset Crohn's Disease'.
 
 Data for the additional dog study \cite{RN153} can be found at the \gls{sra} of the under accession number SRP040310.
-
-\subsubsection{Conflict of Interest}
-We declare none.
-
-\subsubsection{Author Contributions}
-Y. V. B. wrote the manuscript, managed, interpreted and analyzed the data. E. H. contributed to the manuscript and analyzed the data. J. S. contributed to the manuscript, analyzed and interpreted the data. R. K. wrote the manuscript and interpreted the data. All authors worked together to finalize and approve this manuscript.
-
-Please direct all material and requests to Rob Knight robknight@ucsd.edu.
 
 \subsubsection{Acknowledgments}
 

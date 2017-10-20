@@ -139,6 +139,20 @@ We examined the power of differential abundance tests for the 16S data. DESeq2 \
 
 A power analysis was conducted by using samples from the downstream analysis cohort (Supplementary Table~4\footnote{\url{https://images.nature.com/original/nature-assets/nmicrobiol/2017/nmicrobiol20174/extref/nmicrobiol20174-s1.pdf}}). The power of the differential abundance test is dependent on the sample size of groups, difference in mean counts, type 1 error rate, and the dispersion value. Here we used a conventional type 1 error rate of 0.05 and assumed that we have two groups with sample sizes of n1 = 25 and n2 = 80. A total of 1000 \glspl{otu} were randomly selected from the data and dispersion parameters were estimated for each \gls{otu}. Data was then simulated from a negative binomial distribution, as specified by DESeq2, for each estimated dispersion value with means giving 2 fold, 1.5 fold, and 1.25 fold differences. For each mean fold difference value and dispersion value, a total of 5000 data simulations were done and a Wald test for difference in means using a generalized linear model was conducted. Based on these simulations, where data is generated with true differences, the fraction of times that the null hypothesis is correctly rejected (the power), was calculated and our comparisons were well powered given our subset sample sizes (Supplementary  Table~4\footnote{\url{https://images.nature.com/original/nature-assets/nmicrobiol/2017/nmicrobiol20174/extref/nmicrobiol20174-s1.pdf}}). 
 
-\textbf{Data Availability:} Microbiome data from this study is available on Qiita under study ID 1629 (https://qiita.ucsd.edu/study/description/1629) and using the EBI accession number ERP020401. Patient clinical information is available on Qiita and in Supplemental Dataset~1\footnote{\url{https://images.nature.com/original/nature-assets/nmicrobiol/2017/nmicrobiol20174/extref/nmicrobiol20174-s2.txt}}. 
+\subsubsection{Data Availability}
 
-\textbf{Code Availability:} Our analysis methods make use of standard, open source software. R software packages are available on CRAN\footnote{\url{cran.r-project.org}}, bioconductor\footnote{\url{bioconductor.org}}, and GitHub\footnote{\url{github.com/joey711/phyloseq}}. Python software is available in the bioconda and biocore Conda channels, and is maintain on GitHub\footnote{\url{github.com/biocore, github.com/ElDeveloper/reference-plane}}.
+Microbiome data from this study is available on Qiita under study ID 1629 
+(https://qiita.ucsd.edu/study/description/1629) and using the EBI accession 
+number ERP020401. Patient clinical information is available on Qiita and in 
+Supplemental 
+Dataset~1\footnote{\url{https://images.nature.com/original/nature-assets/nmicrobiol/2017/nmicrobiol20174/extref/nmicrobiol20174-s2.txt}}. 
+
+\subsubsection{Code Availability}
+
+Our analysis methods make use of standard, open source software. R software 
+packages are available on CRAN\footnote{\url{cran.r-project.org}}, 
+bioconductor\footnote{\url{bioconductor.org}}, and 
+GitHub\footnote{\url{github.com/joey711/phyloseq}}. Python software is 
+available in the bioconda and biocore Conda channels, and is maintain on 
+GitHub\footnote{\url{github.com/biocore, 
+github.com/ElDeveloper/reference-plane}}.
