@@ -1,6 +1,7 @@
 \glsresetall
 
-\section{Dynamics of the human gut microbiome in Inflammatory Bowel Disease}\label{plane}
+\section{Dynamics of the human gut microbiome in Inflammatory Bowel 
+Disease}\label{section_plane}
 
 Inflammatory bowel disease (IBD) is characterized by flares of inflammation with periodic need for increased medication and sometimes even surgery. \gls{ibd} etiology is partly attributed to a deregulated immune response to gut microbiome dysbiosis. Cross-sectional studies have revealed microbial signatures for different \gls{ibd} diseases, including \gls{uc}, \gls{ccd}, and \gls{icd}. Although \gls{ibd} is dynamic, microbiome studies have primarily focused on single timepoints or few individuals. Here we dissect the long-term dynamic behavior of the gut microbiome in \gls{ibd} and differentiate this from normal variation. Microbiomes of v subjects fluctuate more than healthy individuals, based on deviation from a newly-defined \gls{hp}. \Gls{icd} subjects deviated most from the \gls{hp}, especially subjects with surgical resection. Intriguingly, the microbiomes of some \gls{ibd} subjects periodically visited the \gls{hp} then deviated away from it. Inflammation was not directly correlated with distance to the healthy plane, but there was some correlation between observed dramatic fluctuations in the gut microbiome and intensified medication due to a flare of the disease. These results help guide therapies that will re-direct the gut microbiome towards a healthy state and maintain remission in \gls{ibd}.
 
@@ -68,7 +69,33 @@ From the animated ordination of the samples (Supplementary Video 1\footnote{\lab
 \label{plane-fig1}
 \end{figure} 
 
-The procedure was as follows: let S be a set of n samples $s_1,s_2,… s_n$ corresponding to a group of trajectories, each trajectory pertaining to a subject with at least four samples collected at distinct points in time. Each sample is represented as a three-dimensional vector corresponding to sample coordinates in ordinated space i.e. $s_1=(x_1,y_1,z_1); s_2=(x_2,y_2,z_2); … s_n=(x_n,y_n,z_n)$. We fit a linear model to $S$ by the least squares method to obtain coefficients for the equation of a three dimensional surface $T$, next we restricted a segment of this surface to the ranges given by $[min_x (S),max_x (S)]$ and $[min_y (S),max_y (S)]$, we defined this to be a plane representative of $S$ or $P_s$. When $S$ is the set of samples from healthy subjects in an ordination space we, refer to $P_s$ as the \gls{hp}. Finally, we defined $d_k$ to be the Euclidean distance from a sample $k$ to the nearest point lying on $P_s$. After measuring $d_k$ for all samples in our study, we grouped samples according to their diagnosis, and compared the distributions of distances. Figure~\ref{plane-fig1} a-c demonstrates this procedure, and Figure~\ref{plane-fig1} d-e demonstrates the placement of the \gls{hp} in the context of our full \gls{ibd} dataset. Samples from the \gls{hp} are co-located with one another, while many samples from \gls{ibd} patients are further away. To investigate whether this effect is due to `outlier' groups of samples that are dominated by taxa that are typically rare in healthy individuals, we excluded all Proteobacteria from the dataset, and compared the location of samples in unweighted UniFrac space with and without Proteobacteria using Procrustes analysis. As shown in Figure 1f-g, the omission of Proteobacteria is significant (p $<$ 0.01), but this effect is largest in the already dysbiotic \gls{icd}-r patients and aligns with PC3. The effect on healthy controls is minimal, and healthy samples are still located only near the \gls{hp} (Figure~\ref{plane-fig1} f-g).
+The procedure was as follows: let $S$ be a set of $n$ samples $s_1,s_2, \dots 
+s_n$ corresponding to a group of trajectories, each trajectory pertaining to a 
+subject with at least four samples collected at distinct points in time. Each 
+sample is represented as a three-dimensional vector corresponding to sample 
+coordinates in ordinated space i.e. $s_1=(x_1,y_1,z_1); s_2=(x_2,y_2,z_2); 
+\dots s_n=(x_n,y_n,z_n)$. We fit a linear model to $S$ by the least squares 
+method to obtain coefficients for the equation of a three dimensional surface 
+$T$, next we restricted a segment of this surface to the ranges given by 
+$[min_x (S),max_x (S)]$ and $[min_y (S),max_y (S)]$, we defined this to be a 
+plane representative of $S$ or $P_S$. When $S$ is the set of samples from 
+healthy subjects in an ordination space, we refer to $P_S$ as the \gls{hp}.  
+Finally, we defined $d_k$ to be the Euclidean distance from a sample $k$ to the 
+nearest point lying on $P_S$. After measuring $d_k$ for all samples in our 
+study, we grouped samples according to their diagnosis, and compared the 
+distributions of distances. Figure~\ref{plane-fig1} a-c demonstrates this 
+procedure, and Figure~\ref{plane-fig1} d-e demonstrates the placement of the 
+\gls{hp} in the context of our full \gls{ibd} dataset. Samples from the 
+\gls{hp} are co-located with one another, while many samples from \gls{ibd} 
+patients are further away.  To investigate whether this effect is due to 
+`outlier' groups of samples that are dominated by taxa that are typically rare 
+in healthy individuals, we excluded all Proteobacteria from the dataset, and 
+compared the location of samples in unweighted UniFrac space with and without 
+Proteobacteria using Procrustes analysis. As shown in Figure 1f-g, the omission 
+of Proteobacteria is significant (p $<$ 0.01), but this effect is largest in 
+the already dysbiotic \gls{icd}-r patients and aligns with PC3. The effect on 
+healthy controls is minimal, and healthy samples are still located only near 
+the \gls{hp} (Figure~\ref{plane-fig1} f-g).
 
 Calculation of the mean Euclidean distance from each sample to the \gls{hp} revealed that all subtypes of \gls{ibd} significantly deviated from the \gls{hp} (\gls{glm}, all p $<$ 0.00268, Figure~\ref{plane-fig2}a). Samples from patients with \gls{ccd} and \gls{uc} were closer to the \gls{hp}, and some samples did not differ significantly from healthy controls, whereas \gls{icd} samples were the most distant from the \gls{hp} (Supplementary Video 1\footnote{\label{supVideo2}\url{https://images.nature.com/original/nature-assets/nmicrobiol/2017/nmicrobiol20174/extref/nmicrobiol20174-s3.mov}}; Figure~\ref{plane-fig2}). The highest volatility was observed for \gls{icd} patients that had previously undergone ileocecal resection (\gls{icd}-r), followed by \gls{icd} patients without surgery (\gls{icd}-nr) based on UniFrac distances between successive samples (Figure 2b). \gls{icd}-r patients also had low gut microbial richness (Supplementary Figure~2\footnote{\label{suppdfFig}\url{https://images.nature.com/original/nature-assets/nmicrobiol/2017/nmicrobiol20174/extref/nmicrobiol20174-s1.pdf}}). Ileocecal resection is a major modifier of intestinal physiology, and the observed pronounced volatility in \gls{icd}-r patients might be partly explained by removal of the ileocecal valve per se. Ileal inflammation may also influence bile salt uptake and, consequently, colonic transit time and microbiome volatility. Interestingly, several \gls{ibd} patients had complex trajectories that sporadically moved to and from the \gls{hp} (Figure~\ref{plane-fig2}c, Supplementary Video~1\textsuperscript{\ref{supVideo2}}).
 
@@ -105,23 +132,8 @@ In summary, by analyzing fecal samples collected every 3 months from a large \gl
 
 \subsection{Methods}
 
-\subsubsection{Cohort Demographics}
-
-Patients with \gls{cd} or \gls{uc}, the two major forms of \gls{ibd}, attending the outpatient clinic were consecutively invited to take part. After obtaining written consent, \gls{bmi} was recorded and patients were asked to provide a fecal sample and to fill in a questionnaire with clinical disease activity, present medication, dietary habits, use of antibiotics and use of \glspl{nsaid}. Disease phenotype was classified according to the Montreal classification \cite{Silverberg2005}. Individuals were then followed prospectively, asked to provide fecal samples and to fill in the questionnaire every third month for a two-year period. If a patient did not provide a fecal sample at any of the three months periods, a reminder letter was sent. In total 109 patients with \gls{ibd} (\gls{cd}; n=49 and \gls{uc}; n=60) took part. Nine additional individuals with no \gls{ibd} or any other gastrointestinal conditions were recruited as \gls{hc} as well as 19 patients with other chronic inflammatory gastrointestinal diseases (4 \gls{lc} and 15 \gls{cc}).  All 137 individuals were Caucasians and together they provided 683 fecal samples during the two-year period (Supplementary Table~4\footnote{\url{https://images.nature.com/original/nature-assets/nmicrobiol/2017/nmicrobiol20174/extref/nmicrobiol20174-s1.pdf}}). The study was approved by the Ethical Committee of the Medical Faculty, Uppsala University (2007/291).
-
-\subsubsection{Sample Collection}
-
-Fecal samples were self-collected in sterile plastic containers and stored at -80 °C until shipping on dry ice and processing.
-
-\subsubsection{Fecal calprotectin} 
-
-To assess the degree of inflammatory activity at the collection of each fecal sample, the concentration of f-calprotectin was assessed by commercially available ELISA, Calprotectin Elisa Buhlmann Laboratories AG, Basel, Switzerland, according to the manufacturer's protocol. 
-
-\subsubsection{DNA Extraction and Amplification}
-
-Genomic DNA was extracted from 0.25 g of fecal material from each sample using the Earth Microbiome DNA extraction protocol \cite{EMP2011}. Briefly, DNA was extracted using the 96-well format MoBio Powersoil DNA kit on an EpMotion 5075 robot with vacuum (Eppendorf, Hamburg, Germany). DNA was quantified with the Qubit 2.0 fluorometer (Invitrogen, Carlsbad, CA) according to the manufacturer's instructions.
-
-PCR amplification and library preparation were performed similarly to the protocol described by Caporaso et al. \cite{Caporaso2011proceedings}. 515F/806R Illumina primers with unique reverse primer barcodes were used to target the V4 region of the 16S rRNA gene. Samples were amplified in triplicate and cleaned using the MO BIO 69 htp PCR cleanup kit. Each PCR reaction included 1X PCR buffer, 10 $\mu$M each forward and reverse primer, 200 μM dNTPs, 1 U/ml Taq polymerase, 15 ng template DNA, and PCR grade water, with a total reaction volume of 25 $\mu$L. Reactions were kept at 94\textdegree C for 3 minutes for denaturation to occur. Amplification was performed by 25 cycles of 94\textdegree C for 45s, 58\textdegree C for 60s, and 72\textdegree C for 90s. The V4 amplicons were sequenced on the Illumina HiSeq 2000 platform, yielding single end, 100 base pair reads. Sequencing and quality assessment were performed at the Yale Center for Genome Analysis.
+Cohort demographics, sample collection and sample processing details can be 
+found in Appendix~\ref{appendix_plane}.
 
 \subsubsection{Phylogenetic Analysis}
 
@@ -138,14 +150,6 @@ To assess the variation between samples in an orderly manner (as described by th
 We examined the power of differential abundance tests for the 16S data. DESeq2 \cite{Love2014} assumes that counts can be modeled as a negative binomial distribution with a mean parameter, allowing for size factors, and a dispersion parameter. The test for differential abundances fits a generalized linear model with a negative binomial family and a log link function. 
 
 A power analysis was conducted by using samples from the downstream analysis cohort (Supplementary Table~4\footnote{\url{https://images.nature.com/original/nature-assets/nmicrobiol/2017/nmicrobiol20174/extref/nmicrobiol20174-s1.pdf}}). The power of the differential abundance test is dependent on the sample size of groups, difference in mean counts, type 1 error rate, and the dispersion value. Here we used a conventional type 1 error rate of 0.05 and assumed that we have two groups with sample sizes of n1 = 25 and n2 = 80. A total of 1000 \glspl{otu} were randomly selected from the data and dispersion parameters were estimated for each \gls{otu}. Data was then simulated from a negative binomial distribution, as specified by DESeq2, for each estimated dispersion value with means giving 2 fold, 1.5 fold, and 1.25 fold differences. For each mean fold difference value and dispersion value, a total of 5000 data simulations were done and a Wald test for difference in means using a generalized linear model was conducted. Based on these simulations, where data is generated with true differences, the fraction of times that the null hypothesis is correctly rejected (the power), was calculated and our comparisons were well powered given our subset sample sizes (Supplementary  Table~4\footnote{\url{https://images.nature.com/original/nature-assets/nmicrobiol/2017/nmicrobiol20174/extref/nmicrobiol20174-s1.pdf}}). 
-
-\subsubsection{Data Availability}
-
-Microbiome data from this study is available on Qiita under study ID 1629 
-(https://qiita.ucsd.edu/study/description/1629) and using the EBI accession 
-number ERP020401. Patient clinical information is available on Qiita and in 
-Supplemental 
-Dataset~1\footnote{\url{https://images.nature.com/original/nature-assets/nmicrobiol/2017/nmicrobiol20174/extref/nmicrobiol20174-s2.txt}}. 
 
 \subsubsection{Code Availability}
 

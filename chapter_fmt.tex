@@ -20,13 +20,20 @@ With increasing incidence of community and hospital acquired \gls{cdi}, high rat
 In this study, we assessed the effect of donor type (standard donor versus related donor) and changes in gut microbial ecology on response to \gls{fmt} in \gls{rcdi} with and without underlying \gls{ibd} as well as clinical response to \gls{fmt}. 
 
 \subsection{Methods}
-\subsubsection{Patient selection}
-Patients undergoing \gls{fmt} for \gls{rcdi} were prospectively recruited in this study. Informed consent was obtained to collect clinical data and stool samples. Data collected included demographics, clinical history, \gls{cdi} treatment history, comorbid conditions and response to \gls{fmt}. A donor fecal sample was collected prior to \gls{fmt}. Stool samples from the recipients were collected before \gls{fmt}, and at day 7 and day 28 and were stored at -80\textdegree C. The donors were either related (genetically related family members) or unrelated (screened hospital employee volunteer donors or unrelated family members) and a fresh sample was obtained on the day of \gls{fmt}. All donors underwent extensive screening in accordance with standard practice and guidelines from the Food and Drug Administration \cite{RN1446}. Donor selection criteria and experience from our group have been previously published \cite{RN1523}. The donor stool sample is weighed and divided into 50 grams aliquots. Each aliquot of 50 grams is diluted in normal saline in a 1:5 ratio (50 grams of stool diluted with 250 ml of normal saline) and is placed in the blender bag (a 2 bag system with a semipermeable membrane in the inner bag and the outside bag is plastic). The stool is placed in the inner bag and normal saline is added. The bag is placed in a sealed compartment in the stomacher 400 (Seward) and blended for 60 seconds at 230 rotations per minute. The filtrate is then placed into 50 ml conical tubes using 50 ml pipettes and placed on an ice pack prior to the procedure.  \Gls{rcdi} was defined as another episode of \gls{cdi} within 56 days after symptom resolution with recurrence of symptoms and a positive stool polymerase chain reaction test. For this study, future \textit{C. difficile} episodes after \gls{fmt} up to 2 years were captured. These were categorized as up to 56 days, 56 days to 1 year and beyond 1 year. 
 
-\subsubsection{Sequencing and analytic methods}
-After fecal DNA isolation (MoBio, Carlsbad, CA fecal DNA kit), amplicons spanning the variable region 4 of bacterial 16S rRNA were generated and sequenced using Illumina MiSeq platform at the Mayo Clinic Medical Genome Facility, Rochester, MN. The 16S rRNA sequencing data from the Illumina runs were quality controlled, trimmed, demultiplexed and assigned to \glspl{otu} following the closed reference at 97\% similarity (using SortMeRNA as a clustering algorithm \cite{RN3810} protocol against the Greengenes \cite{RN165} database 13\textunderscore 8 release, as implemented in \gls{qiime} 1.9.0 software \cite{RN110}, default parameters were used for all these steps unless otherwise noted. After quality control, 10,583,052 sequences were obtained, for a mean of 76,688 sequences per sample (min: 33,559, max: 154,200).
+Patient recruitment, sample collection and clinical analysis can be found in 
+Appendix~\ref{appendix_fmt}.
 
- Alpha diversity values were calculated using Faith's phylogenetic diversity \cite{RN4007}. To assess differential abundance between the groups, we used ANCOM \cite{RN1513}, as implemented in scikit-bio 0.5.1\footnote{\url{http://scikit-bio.org/docs/0.5.1/}}. This is tested by looking at the individual \glspl{otu} across the patient types (with and without underlying \gls{ibd}); \glspl{otu} of the same genus are grouped for displaying purposes. We note that ANCOM makes the statistical assumption that fewer than 25\% of taxa change, not met in all these comparisons (before \gls{fmt} and post \gls{fmt} communities are expected to be very different \cite{RN1471}).
+Alpha diversity values were calculated using Faith's phylogenetic diversity 
+\cite{RN4007}. To assess differential abundance between the groups, we used 
+ANCOM \cite{RN1513}, as implemented in scikit-bio 
+0.5.1\footnote{\url{http://scikit-bio.org/docs/0.5.1/}}. This is tested by 
+looking at the individual \glspl{otu} across the patient types (with and 
+without underlying \gls{ibd}); \glspl{otu} of the same genus are grouped for 
+displaying purposes. We note that ANCOM makes the statistical assumption that 
+fewer than 25\% of taxa change, not met in all these comparisons (before 
+\gls{fmt} and post \gls{fmt} communities are expected to be very different 
+\cite{RN1471}).
  
 The donor-plane is created using all the donor samples, and serves as a proxy for where their microbiomes are in the ordination space, and how as time goes by this proximity changes. This procedure was originally presented by Halfvarson et al. \cite{RN1515}.
 
@@ -36,10 +43,6 @@ Processed tables and sample information can be found in Qiita\footnote{\url{http
 
 \subsubsection{SourceTracker Analysis}
 To assess the proportion of pre-transplant communities that were retained in the patients' microbiota, we used SourceTracker \cite{RN3995}. The pre-transplant samples and the donor samples were described as \textit{sources}; all the other samples were used as \textit{sinks}. For all samples at day seven and twenty-eight, SourceTracker estimated the proportion of communities that were attributed one of three environments, (1) the donor, (2) the patient pre-transplant, and (3) and unknown community. Using these proportions, we grouped the samples according to their \gls{ibd} status and compared their distributions using the Mann-Whitney test (as implemented in SciPy 0.15.1\cite{RN165}).
-
-\subsubsection{Clinical Statistics}
-Statistical analyses for clinical data were performed with JMP version 11.0 (SAS institute, NC).  Data analysis included descriptive statistics, t-tests for normally distributed variables, non-parametric tests for skewed variables, chi-square tests and ANOVA tests as applicable. A p-value less than 0.05 was considered statistically significant
-
 
 \subsection{Results}
 

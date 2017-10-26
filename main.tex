@@ -326,21 +326,21 @@ benefit other applications, specially where longitudinal descriptors might be
 predictive of a state of interest.
 
 % TODO: add publication
-Section~\ref{plane} appeared in \textsl{Nature Microbiology, 2017}, My role in 
-this project was to act as the lead analyst of the project, I developed a 
-collection of new algorithms to represent the data, produced a series of 
+Section~\ref{section_plane} appeared in \textsl{Nature Microbiology, 2017}, My 
+role in this project was to act as the lead analyst of the project, I developed 
+a collection of new algorithms to represent the data, produced a series of 
 visualizations used in the paper, co-wrote the text and interpreted the 
-results. Section~\ref{ibd} appeared in the journal \textsl{Gut, 2017}. As the 
-lead contributor of this project, I co-wrote the text, generated the main 
-figures, wrote the software used for analysis, interpreted the results, and 
-deposited the data into a public repository.
+results. Section~\ref{section_ibd} appeared in the journal \textsl{Gut, 2017}.  
+As the lead contributor of this project, I co-wrote the text, generated the 
+main figures, wrote the software used for analysis, interpreted the results, 
+and deposited the data into a public repository.
 
 \ifdefined\RELEASE
     \include{chapter_plane}
     \include{chapter_ibd}
 \else
-    \section{Janet's IBD paper}\label{plane}
-    \section{Balfour's IBD paper}\label{ibd}
+    \section{Janet's IBD paper}\label{section_plane}
+    \section{Balfour's IBD paper}\label{section_ibd}
 \fi
 
 \chapter{Restoring a lost ecosystem}\label{chapter_fmts}
@@ -392,11 +392,8 @@ the data into a public repository.
 
 \include{chapter_conclusions}
 
-%\appendix
-%\chapter{Final notes}
-%  Remove me in case of abdominal pain.
-
-
+\appendix
+\include{appendix}
 
 %% END MATTER
 \printindex %% Uncomment to display the index
