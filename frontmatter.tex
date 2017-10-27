@@ -20,7 +20,7 @@
 \degreetitle{Doctor of Philosophy} 
 
 \field{Computer Science}
-\chair{Rob Knight}
+\chair{Professor Rob Knight}
 % Uncomment the next line iff you have a Co-Chair
 % \cochair{Professor Cochair Semimaster} 
 %
@@ -29,11 +29,8 @@
 
 %  The rest of the committee members  must be alphabetized by last name.
 \othermembers{
-Rachel Dutton\\ 
-Pieter Dorrestein\\ 
-Jim Hollan\\ 
-Larry Smarr\\ 
-}
+Professor Pieter Dorrestein\\Professor  Rachel Dutton\\Professor  Jim 
+Hollan\\Professor Larry Smarr\\ }
 \numberofmembers{5} % |chair| + |cochair| + |othermembers|
 
 
@@ -100,6 +97,19 @@ Larry Smarr\\
 %% SETUP THE TABLE OF CONTENTS
 %
 \tableofcontents
+
+%%
+%% This block was needed to re-format the title of the glossary to match the
+%% headings of the list of figures and list of tables.
+%%
+%% start hack:
+\renewcommand{\glossarysection}[2][]{
+\newpage
+\noindent
+\centerline{LIST OF ABBREVIATIONS}
+}
+%% end hack
+
 \printglossary[title=List of Abbreviations,toctitle=List of Abbreviations,nonumberlist ]
 \listoffigures  % Uncomment if you have any figures
 \listoftables   % Uncomment if you have any tables
