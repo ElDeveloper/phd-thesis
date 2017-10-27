@@ -1575,9 +1575,10 @@ on microfilm and electronically: }}\\
 % Definition of 'thesis' page style.
 %
 \def\ps@thesis{\let\@mkboth\markboth
-\def\@oddfoot{}\def\@evenfoot{}				% no feet
-\def\@oddhead{\hbox{}\hfil\rmfamily\thepage}		% heading (right)
-\def\@evenhead{\rmfamily\thepage\hfil\hbox{}}}		% heading (left)
+\def\@oddhead{}\def\@evenfoot{}				% no feet
+\def\@evenhead{}\def\@evenfoot{}				% no feet
+\def\@oddfoot{\hbox{}\hfil\rmfamily\thepage\hfil\hbox{}}		% heading (right)
+\def\@evenfoot{\hbox{}\hfil\rmfamily\thepage\hfil\hbox{}}}		% heading (left)
 %\pagenumbering{arabic}}					% (WBB)
 
 % Definition of 'preliminary' page style.
