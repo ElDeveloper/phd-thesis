@@ -5,8 +5,8 @@ biology, to get us closer towards a future where drug prescription, diet and
 recreational activities can be further \textit{personalized} -- through a layer
 invisible to the naked eye but perceivable in most respects of life.
 
-It seems impossible to accurately predict the impact of scientific discoveries, 
-historically, we have seen great evidence of seemingly anachronistic findings 
+It seems impossible to accurately predict the impact of scientific discoveries.
+Historically, we have seen great evidence of seemingly anachronistic findings 
 (for example neural networks \cite{Tem10}) that later, usually when other 
 technologies catch up, become new fields of research or cornerstones in 
 consumer applications.  Therefore, while acknowledging this is a tough problem, 
@@ -25,9 +25,8 @@ log-ratio of bacterial groups is associated with decreased phylogenetic
 diversity, and in humans, it is also associated with increased inflammation.  
 Next, after noticing the increased volatility in the microbiome of subjects 
 with \gls{ibd}, we benchmarked microbial variability in fecal samples as an 
-effective classifier for disease.  This method is powerful, because it 
-overcomes the low classification accuracy of fecal samples, and improves as 
-more samples per subject are collected.
+effective classifier for disease. By collecting more samples per subject, we 
+can overcome the low classification accuracy of fecal samples.
 
 Although both approaches are encouraging, translating research into 
 consumer\hyp{}level applications, commonly presents formidable challenges that 
@@ -49,7 +48,7 @@ shorten the time between future discoveries and innovation:
 
 \begin{description}
     \item[Mechanistic Studies]The novelty characteristic of microbiome studies, 
-        has produced a large amount of descriptive studies, contrastingly, 
+        has produced a large amount of descriptive studies. Contrastingly, 
         mechanistic experiments have lagged in validating several of these 
         findings (likely due to the more expensive requirements).  If the goal 
         is to relate the presence or abundance of a microbiome feature to a
@@ -57,34 +56,34 @@ shorten the time between future discoveries and innovation:
         informed by biological inferences in order for these biomarkers to gain 
         credibility.
 
-    \item[Open Data]Medical research is specially affected by human factors, 
+    \item[Open Data]Medical research is especially affected by human factors, 
         being able to consistently collect samples from a subject is not always 
         easy or deterministic (think of bowel problems and fecal samples). A 
-        powerful practice used to counter underpowered studies, is to improve 
-        on the current sample size through the reuse of previously published 
-        data. This approach is only possible through open resources like 
+        powerful practice used to counter underpowered studies is to improve on 
+        the current sample size through the reuse of previously published data.  
+        This approach is only possible through open resources, like 
         Qiita\footnote{\url{https://qiita.ucsd.edu/}}, that make data reuse 
         seamless. Importantly, the work in this thesis was only possible 
         through the reuse of existing datasets (see 
         Chapter~\ref{exploratory_chapter} through Chapter~\ref{chapter_fmts}).  
         Although making data openly available is an important first step, 
-        proper standardization of processing protocols, will also be key to 
-        maximizes data re-usability, a remarkable example of this practice is 
+        proper standardization of processing protocols will also be key to 
+        maximizes data re-usability. A remarkable example of this practice is 
         the \gls{emp} \cite{RN4267}.
 \end{description}
 
 \section{Treatment}
 
-Microbiome\hyp{}based treatments, are generally based on the transplantation of 
-microbial communities from a \textit{healthy} donor into an affected 
-\textit{recipient}. Three spearheading examples are: \glspl{fmt} to treat 
+Microbiome\hyp{}based treatments are generally based on the transplantation of 
+microbial communities from a \textit{healthy donor} into an \textit{affected 
+recipient}. Three spearheading examples are: \glspl{fmt} to treat 
 \gls{cdi} \cite{RN4129}, skin microbiomes transplants to treat atopic 
 dermatitis \cite{GalloSkin}, and (although still in early stages) a capsule 
 full of microbial spores to treat \gls{uc} by Seres 
 Therapeutics\footnote{\url{http://www.serestherapeutics.com}}.
 
 Although most \glspl{fmt} succeed at treating \gls{cdi}, what makes a
-successful transplant is not clear yet, the number of variables implicated in
+successful transplant is not clear yet. The number of variables implicated in
 answering this question is immense. From a computational complexity standpoint,
 \textit{a priori} determination of whether or not a new community can colonize 
 an existing ecosystem is considered a hard problem, belonging to the 
@@ -92,42 +91,42 @@ an existing ecosystem is considered a hard problem, belonging to the
 our systematic understanding of the transplant, and characterize not only what 
 makes a successful transplant but also what makes a failed one.  For example, 
 the impact of the work presented in Section~\ref{section_fmt} could have been 
-magnified, if we had included subjects for which the \gls{fmt} failed. With 
+magnified if we had included subjects for which the \gls{fmt} failed. With 
 appropriate sample sizes, we could have applied a number of techniques to 
-single out (if any) the features common that lead to a failed transplant. With 
+single out (if any) the common features that lead to a failed transplant. With 
 this knowledge, we could pre-screen \textit{donors} and \textit{recipients} to 
-ensure a successful treatment, and avoid unexpected side-effects.
+ensure a successful treatment and avoid unexpected side-effects.
 
 \section{Analysis}
 
 Much as our microbial symbionts depend on the host environment (and vice
 versa), the development and funding of analytical tools depends on the
 ever-growing necessity to unravel complex patterns in a number of experimental
-setups (cross-sectional, longitudinal, multi-'omic, etc). Thus, these tools,
-must take into consideration the ability to be flexible, scalable and when
+setups (cross-sectional, longitudinal, multi-'omic, etc). Thus, these tools
+must take into consideration the ability to be flexible, scalable, and when
 possible interactive.
 
-Novel analytical methods and software infrastructure, should be built making 
+Novel analytical methods and software infrastructure should be built making 
 scalability a priority.  We have seen a steady increase in our capability to 
 generate data, and it is likely that this trend will continue. Emperor 
 (Chapter~\ref{section_emperor}) was partly a response to the limitations in 
 existing software, and more recently we had to re-architect the underlying 
 implementation to cope with modern and larger datasets.
 
-Flexibility and compliance with community standards, makes software available
+Flexibility and compliance with community standards makes software available
 to a wider audience. Take the count table, often acting as the core
 data-structure for metabolomic, transcriptomic, proteomic, (and other 'omics)
 analyses. If the software producing this data complies with a standard, like
 the \gls{biom}-format, the end user is now free to select from a variety of
-methods as opposed to being limited to \textit{nieche-software}. This idea is 
+methods as opposed to being limited to \textit{niche-software}. This idea is 
 being taken a step further with \gls{qiime}-2, where a semantic type system 
 defines the methods and visualizations that can be applied to any given dataset 
 (regardless of its biological origin).
 
-Finally, the value of interactively exploring a dataset, lies on our ability to 
-quickly test hypotheses, and iteratively develop new ones. Future exploratory 
+Finally, the value of interactively exploring a dataset lies in our ability to 
+quickly test hypotheses and iteratively develop new ones. Future exploratory 
 analysis tools should be developed with interactivity and interoperability in 
-mind, for example, brushing to select a group of samples in a view of data 
+mind. For example, brushing to select a group of samples in a view of data 
 might act as a filter for a different representation. Modern web technologies, 
 and software development frameworks like \gls{qiime}-2, will likely be the 
 pioneers of these global overviews of microbial diversity.

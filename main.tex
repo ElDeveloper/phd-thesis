@@ -211,12 +211,12 @@ introduced previously, is a successful\footnote{At the moment of this writing
 the original paper has been cited over 8,000 times according to Google Scholar, 
 and the Python package has been downloaded over 34,000 times, data from 
 \url{https://pypi.org} and \url{https://anaconda.org}.} microbiome analysis 
-pipeline that integrates a collection of bioinformatics tools, and makes these 
+pipeline that integrates a collection of bioinformatics tools and makes these 
 programs available through a unified user-interface. Until its fifth release, 
 \gls{qiime} relied on \gls{king} to represent three-dimensional 
 $\beta$-diversity plots. \gls{king} was originally developed as a molecular 
-viewer, and was \textit{hacked} to act as a scatter-plot viewer. As datasets 
-got larger and more common, it became clear that we needed to develop our own 
+viewer and was \textit{hacked} to act as a scatter-plot viewer. As datasets got 
+larger and more common, it became clear that we needed to develop our own 
 solution, thus we created Emperor.
 
 Emperor is an interactive $\beta$-diversity viewer, tailored to fit the 
@@ -224,20 +224,20 @@ Emperor is an interactive $\beta$-diversity viewer, tailored to fit the
 ordinations or dimensionality reductions, are often the starting point when 
 analyzing a microbiome dataset. Their ability to overview the relative 
 differences of an unlimited number of samples with an unlimited number of 
-covariates, makes this representation invaluable to diagnose and troubleshoot 
-any problems that may have occurred during sample collection, preparation or 
+covariates makes this representation invaluable to diagnose and troubleshoot 
+any problems that may have occurred during sample collection, preparation, or 
 processing. For example, batch effects are often easy to notice in this 
-representation \cite{Gibbons165910}, but more challenging to see in 
-feature-level analyses, specially if those specific features are 
-not affected by the batch effects.
+representation \cite{Gibbons165910} but more challenging to see in 
+feature-level analyses, especially if those specific features are not affected 
+by the batch effects.
 
 As use-cases arose, these were integrated as part of the software, something 
-previously not possible with \gls{king}. A notable feature, was allowing users 
-to animate longitudinal sampling schemes, this ability was of key importance 
-for the work in Chapter~\ref{chapter_ibds} and Chapter~\ref{chapter_fmts}. The 
-following two sections introduce Emperor, further discussing some of its 
-statistical capabilities, and the use of animated ordinations as a way to 
-interact with microbiome data.
+previously not possible with \gls{king}. A notable feature allowed users to 
+animate longitudinal sampling schemes, of key importance for the work in 
+Chapter~\ref{chapter_ibds} and Chapter~\ref{chapter_fmts}. The following two 
+sections introduce Emperor, further discussing some of its statistical 
+capabilities, and the use of animated ordinations as a way to interact with 
+microbiome data.
 
 Section~\ref{section_emperor} was published in the journal \textsl{GigaScience, 
 2013} and Section~\ref{section_animations} was published in the journal 
@@ -256,18 +256,18 @@ the context of \gls{qiime} and provide support through the \gls{qiime} Forum.
 
 \chapter{Inflammatory bowel disease in Dogs and Humans}\label{chapter_dogs}
 
-\gls{ibd} is a family of conditions divided in two major categories, \gls{uc} 
+\gls{ibd} is a family of conditions divided into two major categories, \gls{uc} 
 and \gls{cd}, each of which can be further divided into other subtypes 
-specifying location, age of diagnosis, severity and behaviour of the disease 
+specifying location, age of diagnosis, severity, and behaviour of the disease 
 \cite{RN4265}.  In all cases \gls{ibd} is associated with diarrhea, 
-inflammation and flaring episodes of exacerbated discomfort. In general, 
+inflammation, and flaring episodes of exacerbated discomfort. In general, 
 diagnostic methods rely on questionnaires, direct examinations of affected 
 intestinal tissue, or quantification of calprotectin \cite{Sipponen2008}.
 
 In this chapter, we introduce work motivated by our recent efforts at 
 characterizing the microbiome in new-onset and treatment-naive Crohn's disease 
 subjects \cite{RN154}. Specifically, we focus on comparing the microbiomes of 
-\gls{ibd} affected humans and dogs. As a result, we further expanded the 
+\gls{ibd}-affected humans and dogs. As a result, we further expanded the 
 repertoire of features that we know and associate with \gls{ibd} in dogs 
 \cite{RN153}, and through a meta-analysis contextualize them with human fecal 
 samples \cite{RN154}.
@@ -276,15 +276,15 @@ As we did before \cite{RN154}, we create a dysbiosis network\footnote{A
 dysbiosis network is a graph constructed using a correlation matrix as a 
 weighted adjacency matrix.} to statistically infer the bacterial genera 
 associated with the disease. This representation allows us to directly compare 
-microbial groups across datasets, and their relationship to each other. We find 
-that the human and dog dysbiosis networks are overlapping, both in structure 
-and in the microbes associated with \gls{ibd} and non-\gls{ibd} communities, 
-however, we uncover a taxon that shifts from being non \gls{ibd}-associated in 
-humans to being \gls{ibd}-associated in dogs.
+microbial groups across datasets, and explore their relationship to each other.  
+We find that the human and dog dysbiosis networks are overlapping, both in 
+structure and in the microbes associated with \gls{ibd} and non-\gls{ibd} 
+communities. However, we uncover a taxon that shifts from being non 
+\gls{ibd}-associated in humans to being \gls{ibd}-associated in dogs.
 
 Section~\ref{dogs} appeared in the journal \textsl{Nature Microbiology, 2016}.  
 As the lead contributor of this project, I co-wrote the text, generated the 
-main figures, processed, analyzed, interpreted and deposited the data into a 
+main figures, processed, analyzed, interpreted, and deposited the data into a 
 public repository.
 
 \ifdefined\RELEASE
@@ -296,17 +296,17 @@ public repository.
 \chapter{Dynamic features of inflammatory bowel disease}\label{chapter_ibds}
 
 In recent years, clinical research in \gls{ibd} has benefited from multi-'omic 
-(genomic \cite{RN4217}, metabolomic \cite{RN4264} and metagenomic 
-\cite{RN4263}) characterizations of the condition. Each describing a new 
-component of relationships, that one by one, seem to uncover the processes 
-regulating the inflammation and well-being of the affected hosts. Nonetheless 
-longitudinal descriptions (and as a consequence representations) of \gls{ibd} 
-were largely unexplored.
+(genomic \cite{RN4217}, metabolomic \cite{RN4264}, and metagenomic 
+\cite{RN4263}) characterizations of the condition. Each of these approaches 
+describes a new component of relationships that, one by one, seem to uncover 
+the processes regulating the inflammation and well-being of the affected hosts.  
+Nonetheless, longitudinal descriptions (and as a consequence representations) 
+of \gls{ibd} were largely unexplored.
 
-This chapter introduces two pioneering longitudinal studies of \gls{ibd}, one 
+This chapter introduces two pioneering longitudinal studies of \gls{ibd}. One 
 where the sampling is sparse (every three months) and another where the 
 sampling is dense (as much as every day). Both cohorts present increased rates 
-of microbial variation, specifically we see that this appears to be different 
+of microbial variation. Specifically, we see that this appears to be different 
 for the different subtypes of \gls{ibd}. In order to visualize the increased 
 variation, we rely on the techniques introduced in 
 Chapter~\ref{exploratory_chapter}, and on the definition of a reference plane 
@@ -317,8 +317,8 @@ determine the benefits of increased longitudinal sampling. For both
 (independently collected and sequenced) datasets, we observe that including 
 more than one sample per subject increases the performance of a classifier.  
 This property is only possible when we transform the original representation of 
-the data, and create per-subject consensus features based on multiple 
-timepoints. Briefly, these features aggregate multiple samples together, and 
+the data and create per-subject consensus features based on multiple 
+timepoints. Briefly, these features aggregate multiple samples together and 
 exploit the increased instability as an informative classification feature.
 
 Although we exercise and test this method with human-gut data, the approach is 
@@ -327,10 +327,10 @@ benefit other applications, specially where longitudinal descriptors might be
 predictive of a state of interest.
 
 % TODO: add publication
-Section~\ref{section_plane} appeared in \textsl{Nature Microbiology, 2017}, My 
+Section~\ref{section_plane} appeared in \textsl{Nature Microbiology, 2017}. My 
 role in this project was to act as the lead analyst of the project, I developed 
 a collection of new algorithms to represent the data, produced a series of 
-visualizations used in the paper, co-wrote the text and interpreted the 
+visualizations used in the paper, co-wrote the text, and interpreted the 
 results. Section~\ref{section_ibd} appeared in the journal \textsl{Gut, 2017}.  
 As the lead contributor of this project, I co-wrote the text, generated the 
 main figures, wrote the software used for analysis, interpreted the results, 
@@ -349,23 +349,24 @@ and deposited the data into a public repository.
 
 \gls{cdi} is a hospital-acquired infection resulting from antibiotic 
 administration for an unrelated condition. Paradoxically, the treatment for 
-\gls{cdi} is to prescribe more antibiotics. This treatment generally translates 
-in depleted microbial diversity, as a consequence, resources that could be 
-consumed by other communities are now available for \textit{Clostridium 
-difficile} to thrive on.  More recently \gls{cdi} has been treated through the 
-administration of \glspl{fmt}, with a success rate above 90\% \cite{RN4129}. A 
-\gls{fmt} consists in reintroducing bacteria into the \gls{gi} tract of an 
-affected patient. Frequently, after a day, the symptoms of \gls{cdi} disappear 
-and the recipients recover. In this chapter, we examine two cohorts and focus 
-on the short and long-term changes in the gut microbiota after a \gls{fmt}.
+\gls{cdi} is to prescribe more antibiotics. This treatment generally 
+translatesto depleted microbial diversity. As a consequence, resources that 
+could be consumed by other communities are now available for 
+\textit{Clostridium difficile} to thrive on.  More recently \gls{cdi} has been 
+treated through the administration of \glspl{fmt}, with a success rate above 
+90\% \cite{RN4129}. A \gls{fmt} consists of reintroducing bacteria into the 
+\gls{gi} tract of an affected patient. Frequently, after a day, the symptoms of 
+\gls{cdi} disappear and the recipients recover. In this chapter, we examine two 
+cohorts and focus on the short and long-term changes in the gut microbiota 
+after a \gls{fmt}.
 
-In the first cohort and relying on an animated $\beta$-diversity plot (as 
+In the first cohort, relying on an animated $\beta$-diversity plot (as 
 introduced in Section~\ref{section_animations}), we visualize the immediate 
 changes in the gut microbiome after a \gls{fmt}. In addition, we also visualize 
-the stability of the microbiome after the transplant, and note that the only 
-point of instability occurs right after the \gls{fmt}.
+the stability of the microbiome after the transplant and note that the only 
+point of instability occurs immediately after the \gls{fmt}.
 
-The second cohort is composed by patients suffering from \gls{cdi} and in some 
+The second cohort is composed of patients suffering from \gls{cdi} and in some 
 cases with underlying \gls{ibd}. We find that, while both groups recover from 
 the \gls{cdi}, the micro-ecological effects of \gls{fmt} appear to be dampened 
 in subjects with underlying \gls{ibd}. Overall, individual phylogenetic 
@@ -373,10 +374,10 @@ diversity is lower, and the number of taxa differentially present before and
 after the transplant is also smaller (when compared to the non-\gls{ibd} 
 counterparts).
 
-Section~\ref{section_moviefmt} appered in the journal \textsl{Microbiome, 
-2015}. As the lead analyst in this project, I contributed to the text, analyzed 
-and interpreted the data, wrote software used for the analysis, and generated 
-the main visuals.  Section~\ref{section_fmt} appered in the journal 
+Section~\ref{section_moviefmt} appeared in the journal \textsl{Microbiome, 
+2015}.  As the lead analyst in this project, I contributed to the text, 
+analyzed and interpreted the data, wrote software used for the analysis, and 
+generated the main visuals.  Section~\ref{section_fmt} appered in the journal 
 \textsl{Microbiome, 2017}. As the co-lead contributor to this project, I 
 co-wrote the text, generated the figures, analyzed, interpreted, and deposited 
 the data into a public repository.
